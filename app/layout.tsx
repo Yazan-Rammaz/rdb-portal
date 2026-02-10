@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-
+import 'ramaaz-digital-banking/dist/styles/styles.css';
 // Swiper and Datepicker styles from main.tsx
 import 'swiper/css';
 import 'swiper/css/navigation';

@@ -8,9 +8,16 @@ interface UserActionsProps {
     onEdit?: (user: User) => void;
     onDelete?: (userId: string) => void;
     onBlock?: (userId: string) => void;
+    onRdbOpen?: (userId: string) => void;
 }
 
-const UserActions: React.FC<UserActionsProps> = ({ user, onEdit, onDelete, onBlock }) => {
+const UserActions: React.FC<UserActionsProps> = ({
+    user,
+    onEdit,
+    onDelete,
+    onBlock,
+    onRdbOpen,
+}) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
@@ -133,6 +140,27 @@ const UserActions: React.FC<UserActionsProps> = ({ user, onEdit, onDelete, onBlo
                                     />
                                 </svg>
                                 Delete
+                            </button>
+                        )}
+                        {onRdbOpen && (
+                            <button
+                                onClick={() => handleAction(() => onRdbOpen(user._id))}
+                                className="w-full cursor-pointer text-left px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 flex items-center gap-2"
+                            >
+                                <svg
+                                    className="w-4 h-4"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                    />
+                                </svg>
+                                Open RDB
                             </button>
                         )}
                     </div>

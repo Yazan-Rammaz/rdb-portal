@@ -11,11 +11,16 @@ import Pagination from '@/components/shared/Table/Pagination';
 import LoadingTable from '@/components/shared/Table/LoadingTable';
 import ErrorFetch from '@/components/shared/Table/ErrorFetch';
 import TableHeader, { Column } from '@/components/shared/Table/TableHeader';
+import DraggableRDBModal from './components/DraggableRDBModal';
+import { RDB } from 'ramaaz-digital-banking'; // Uncomment when importing the actual RDB component
+import { serverActions } from '@/utils/rdb';
 
 const UsersTable = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+    const [isRdbModalOpen, setIsRdbModalOpen] = useState(false);
+    const [selectedUserId, setSelectedUserId] = useState<string | null>(null);
     const [pagination, setPagination] = useState<{
         page: number;
         limit: number;
@@ -114,6 +119,10 @@ const UsersTable = () => {
         console.log('Block/Unblock user:', userId);
         // TODO: Implement block/unblock functionality
     };
+    const handleRdbOpen = (userId: string) => {
+        setSelectedUserId(userId);
+        setIsRdbModalOpen(true);
+    };
 
     if (loading) {
         return <LoadingTable />;
@@ -177,6 +186,7 @@ const UsersTable = () => {
                     onEdit={(user) => handleEdit(user)}
                     onDelete={(userId) => handleDelete(userId)}
                     onBlock={(userId) => handleBlock(userId)}
+                    onRdbOpen={(userId) => handleRdbOpen(userId)}
                 />
             ),
         },
@@ -186,20 +196,20 @@ const UsersTable = () => {
         <div className="bg-white mt-10 rounded-lg shadow overflow-hidden">
             {/* Filters */}
             <div className="p-4 border-b border-gray-200">
-                <UserFilters
+                {/* <UserFilters
                     onSearch={(search) => handleFilterChange({ search })}
                     onFilterChange={(filters) => handleFilterChange(filters)}
-                />
+                /> */}
             </div>
 
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                     <TableHeader<User> columns={columns} />
                     <tbody className="bg-white divide-y divide-gray-200">
-                        {users.map((user) => (
+                        {users.map((user, i) => (
                             <UserRow
                                 handleRowClick={handleRowClick}
-                                key={user._id}
+                                key={`${user._id}-${i}`}
                                 user={user}
                                 columns={columns}
                             />
@@ -220,6 +230,46 @@ const UsersTable = () => {
                     onPageChange={handlePageChange}
                 />
             )}
+
+            {/* Draggable RDB Modal */}
+            <DraggableRDBModal
+                isOpen={isRdbModalOpen}
+                onClose={() => {
+                    setIsRdbModalOpen(false);
+                    setSelectedUserId(null);
+                }}
+            >
+                <div className="py-1 h-full">
+                    {/* <h2 className="text-2xl font-bold mb-6 text-gray-800">
+                        User RDB Details - {selectedUserId}
+                    </h2> */}
+
+                    {/* RDB Component - Replace with actual RDB component import */}
+                    {/* Example implementation: */}
+                    <RDB
+                        baseUrl="https://trydos_wallet_develop.ramaaz.dev"
+                        authToken={selectedUserId || 'unknown_user'}
+                        actions={serverActions}
+                        handleUnauthenticated={() => {
+                            console.log('user not authenticated');
+                            setIsRdbModalOpen(false);
+                            setSelectedUserId(null);
+                        }}
+                        // ... other props from ramaaz-digital-banking
+                    />
+
+                    {/* Placeholder */}
+                    {/* <div className="bg-gray-50 rounded-lg p-6 border-2 border-dashed border-gray-300">
+                        <p className="text-gray-600 text-center">
+                            RDB Component will be rendered here for user:{' '}
+                            <strong>{selectedUserId}</strong>
+                        </p>
+                        <p className="text-sm text-gray-500 text-center mt-2">
+                            Import and use the RDB component from ramaaz-digital-banking package
+                        </p>
+                    </div> */}
+                </div>
+            </DraggableRDBModal>
         </div>
     );
 };
