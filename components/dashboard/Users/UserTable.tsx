@@ -124,10 +124,6 @@ const UsersTable = () => {
         setIsRdbModalOpen(true);
     };
 
-    if (loading) {
-        return <LoadingTable />;
-    }
-
     if (error) {
         return (
             <ErrorFetch error={error} fetch={() => fetchUsers(pagination.page, pagination.limit)} />
@@ -202,10 +198,12 @@ const UsersTable = () => {
                 /> */}
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto relative">
                 <table className="min-w-full divide-y divide-gray-200">
                     <TableHeader<User> columns={columns} />
-                    <tbody className="bg-white divide-y divide-gray-200">
+                    <tbody
+                        className={`bg-white divide-y divide-gray-200 ${loading && users.length > 0 ? 'opacity-60' : ''}`}
+                    >
                         {users.map((user, i) => (
                             <UserRow
                                 handleRowClick={handleRowClick}
@@ -216,6 +214,8 @@ const UsersTable = () => {
                         ))}
                     </tbody>
                 </table>
+
+                <LoadingTable loading={loading} hasData={users.length > 0} />
             </div>
 
             {/* Pagination */}
