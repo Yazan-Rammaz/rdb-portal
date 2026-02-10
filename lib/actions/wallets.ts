@@ -1,6 +1,7 @@
 import { isEthereumAddress, isTronAddress } from '.';
 import Web3 from 'web3';
 import { formatBalance } from './utils';
+import LocalStorage from '@/utils/localStorage';
 import { BalanceInfo, Result, TransactionsCount, WalletTypes } from '@/types';
 
 
@@ -15,7 +16,7 @@ let rates: { usdtEtherToUsd: any; usdtTronToUsd: any; ethToUsd: any; trxToUsd: a
 
 //***************************   Ether   **************************** */
 const fetchEthBalances = async (address: string): Promise<any> => {
-    const keysStored = localStorage.getItem('KEYS');
+    const keysStored = LocalStorage.getItem('KEYS');
     const apiKeyEther = keysStored ? JSON.parse(keysStored)?.etherscan : apiKeyEtherEnv;
     const response = await fetch(`https://api.etherscan.io/api?module=account&action=balance&address=${address}&tag=latest&apikey=${apiKeyEther}`);
     if (!response.ok) throw new Error('Failed to fetch ETH balances');
@@ -25,7 +26,7 @@ const fetchEthBalances = async (address: string): Promise<any> => {
 };
 
 const fetchUsdtBalances = async (address: string): Promise<any> => {
-    const keysStored = localStorage.getItem('KEYS');
+    const keysStored = LocalStorage.getItem('KEYS');
     const apiKeyEther = keysStored ? JSON.parse(keysStored)?.etherscan : apiKeyEtherEnv;
     const usdtContractAddress = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
     const res = await fetch(
@@ -35,7 +36,7 @@ const fetchUsdtBalances = async (address: string): Promise<any> => {
     return await res.result;
 };
 const fetchTransactions = async (address: string): Promise<any> => {
-    const keysStored = localStorage.getItem('KEYS');
+    const keysStored = LocalStorage.getItem('KEYS');
     const apiKeyEther = keysStored ? JSON.parse(keysStored)?.etherscan : apiKeyEtherEnv;
     const usdtContractAddress = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
 
@@ -89,7 +90,7 @@ export const _getEtherAddressesDetails = async (address: string): Promise<Result
 //***************************   Tron   **************************** */
 
 export const _getTronAddressDetails = async (address: string) => {
-    const keysStored = localStorage.getItem('KEYS');
+    const keysStored = LocalStorage.getItem('KEYS');
     const apiKeyTron = keysStored ? JSON.parse(keysStored)?.tronscan : apiKeyTronEnv;
     const response = await fetch(`https://apilist.tronscan.org/api/account?address=${address}`, {
         headers: {
@@ -148,7 +149,7 @@ export const getExchangeRates = async (): Promise<{
         usdtEtherToUsd: number;
         usdtTronToUsd: number;
     }> => {
-        const keysStored = localStorage.getItem('KEYS');
+        const keysStored = LocalStorage.getItem('KEYS');
         const apiKeyTron = keysStored ? JSON.parse(keysStored)?.tronscan : apiKeyTronEnv;
         try {
             const headers: Record<string, string> = {};
@@ -196,7 +197,7 @@ export interface UpdatedWallet extends WalletTypes {
     newData?: Result;
 }
 export const _getBalancesAndTransactionsSequentially = async ({ wallets }: { wallets: WalletTypes }): Promise<UpdatedWallet> => {
-    const ratesFromStorage = localStorage.getItem('rates');
+    const ratesFromStorage = LocalStorage.getItem('rates');
     rates = ratesFromStorage && JSON.parse(ratesFromStorage);
     const walletsArr = wallets.crypto_wallets;
 

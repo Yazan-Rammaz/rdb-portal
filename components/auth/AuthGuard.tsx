@@ -5,23 +5,23 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 
 export function AuthGuard({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const { isUnlocked, user } = useAuth();
-  const [isReady, setIsReady] = useState(false);
+    const router = useRouter();
+    const pathname = usePathname();
+    const { isUnlocked, user } = useAuth();
+    const [isReady, setIsReady] = useState(false);
 
-  useEffect(() => {
-    if (!user || !user.id || !isUnlocked) {
-      const redirectUrl = encodeURIComponent(pathname);
-      router.replace(`/login?redirect=${redirectUrl}`);
-    } else {
-      setIsReady(true);
+    useEffect(() => {
+        if (!user || !user.accessToken || !isUnlocked) {
+            const redirectUrl = encodeURIComponent(pathname);
+            // router.replace(`/login?redirect=${redirectUrl}`);
+        } else {
+            setIsReady(true);
+        }
+    }, [user, isUnlocked, router, pathname]);
+
+    if (!isReady) {
+        return null;
     }
-  }, [user, isUnlocked, router, pathname]);
 
-  if (!isReady) {
-    return null;
-  }
-
-  return <>{children}</>;
+    return <>{children}</>;
 }

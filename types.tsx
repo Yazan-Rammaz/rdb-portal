@@ -72,7 +72,7 @@ export const defaultCryptoTransactionRes: DRIDataInterface = {
     remaining: 0,
     id: 0,
     token: '',
-    received_amount: null
+    received_amount: null,
 };
 
 export interface UserInterface {
@@ -80,7 +80,7 @@ export interface UserInterface {
     id?: number;
     username: string;
     avatar: string;
-    user: any
+    user: any;
 }
 export type BalanceInfo = {
     trxBalance?: string;
@@ -123,7 +123,13 @@ export interface CryptoContract {
     is_btc?: number;
     is_deployed?: number;
     name?: string;
-    pivot?: { crypto_wallet_id?: number; crypto_contract_id?: number; balance?: string; usdtbalance?: string; usdtBalance?: string };
+    pivot?: {
+        crypto_wallet_id?: number;
+        crypto_contract_id?: number;
+        balance?: string;
+        usdtbalance?: string;
+        usdtBalance?: string;
+    };
     balance?: string;
     crypto_contract_id?: 5;
     crypto_wallet_id?: 49;

@@ -1,0 +1,24 @@
+{
+  "accessToken": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTg5YjRlZDIyNzY0YzQ1ZmFhY2Y4ODgiLCJlbWFpbCI6InlhemFuLmFkYW5vZkByYW1hYXouY29tIiwidHlwZSI6ImFkbWluIiwicm9sZSI6InN1cGVyX2FkbWluIiwiaWF0IjoxNzcwNjM5ODM1LCJleHAiOjE3NzMyMzE4MzV9.g6dp24jPwuLPp4Z--uoion5S8kaUwrcgdSnYgofoAX0",
+    "expiresAt": "2026-03-11T12:23:55.367Z"
+  },
+  "refreshToken": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTg5YjRlZDIyNzY0YzQ1ZmFhY2Y4ODgiLCJlbWFpbCI6InlhemFuLmFkYW5vZkByYW1hYXouY29tIiwidHlwZSI6ImFkbWluIiwicm9sZSI6InN1cGVyX2FkbWluIiwidG9rZW5UeXBlIjoicmVmcmVzaCIsImlhdCI6MTc3MDYzOTgzNSwiZXhwIjoxNzczMjMxODM1fQ.cvWMZsb3Gwx4CPTzNx0Jwr87YkTsO27fK0SLZSTER4s",
+    "expiresAt": "2026-03-11T12:23:55.367Z"
+  },
+  "admin": {
+    "id": "6989b4ed22764c45faacf888",
+    "email": "yazan.adanof@ramaaz.com",
+    "fullName": "yazan Adanof",
+    "role": "super_admin",
+    "permissions": [],
+    "status": "active",
+    "lastLoginIp": "127.0.0.1",
+    "lastLoginAt": "2026-02-09T12:15:07.415Z",
+    "createdBy": "6968a2d041e3b46089dcbfa1",
+    "notes": "Contact: +966XXXXXXXXX",
+    "createdAt": "2026-02-09T10:20:29.892Z",
+    "updatedAt": "2026-02-09T12:15:07.415Z"
+  }
+}

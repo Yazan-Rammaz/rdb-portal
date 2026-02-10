@@ -3,7 +3,14 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const ArrowRoundedSvg = () => {
     return (
-        <svg id="_15x15_photo_back" data-name="15x15 photo back" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="_15x15_photo_back"
+            data-name="15x15 photo back"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <g id="Mask_Group_194" data-name="Mask Group 194">
                 <g id="dollar">
                     <g id="Group_7904" data-name="Group 7904">
@@ -30,54 +37,168 @@ export const ArrowRoundedSvg = () => {
 
 export const BrokerCardSvg = ({ w = '20', h = '20' }: { w?: string; h?: string }) => {
     return (
-        <svg id="Group_12681" data-name="Group 12681" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width={w} height={h} viewBox={`0 0 ${w} ${h}`}>
+        <svg
+            id="Group_12681"
+            data-name="Group 12681"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            width={w}
+            height={h}
+            viewBox={`0 0 ${w} ${h}`}
+        >
             <g id="Mask_Group_506" data-name="Mask Group 506">
                 <g id="_x35_6_Seo" transform="translate(-0.001 1.2)">
                     <g id="Group_12102" data-name="Group 12102">
-                        <path id="Path_22181" data-name="Path 22181" d="M11.045.267H1.424A1.19,1.19,0,0,0,.235,1.456V9.135a1.19,1.19,0,0,0,1.189,1.189h9.621a1.191,1.191,0,0,0,1.191-1.189V1.456A1.191,1.191,0,0,0,11.045.267ZM9.979,1.5h.65a.192.192,0,0,1,0,.383h-.65a.192.192,0,0,1,0-.383Zm-1.57,0h.65a.192.192,0,1,1,0,.383h-.65a.192.192,0,1,1,0-.383Zm-6.73,0H6.837a.192.192,0,0,1,0,.383H1.679a.192.192,0,1,1,0-.383ZM11.852,9.135a.807.807,0,0,1-.807.805H8.928l0,0-5.37-.019L1.424,9.94a.806.806,0,0,1-.805-.805V3.063H11.852Z" transform="translate(-0.235 -0.267)" fill="#8e8e8e" />
-                        <path id="Path_22182" data-name="Path 22182" d="M6.566,7.229A1.132,1.132,0,1,1,5.435,6.1,1.132,1.132,0,0,1,6.566,7.229Z" transform="translate(0.578 0.898)" fill="#8e8e8e" />
+                        <path
+                            id="Path_22181"
+                            data-name="Path 22181"
+                            d="M11.045.267H1.424A1.19,1.19,0,0,0,.235,1.456V9.135a1.19,1.19,0,0,0,1.189,1.189h9.621a1.191,1.191,0,0,0,1.191-1.189V1.456A1.191,1.191,0,0,0,11.045.267ZM9.979,1.5h.65a.192.192,0,0,1,0,.383h-.65a.192.192,0,0,1,0-.383Zm-1.57,0h.65a.192.192,0,1,1,0,.383h-.65a.192.192,0,1,1,0-.383Zm-6.73,0H6.837a.192.192,0,0,1,0,.383H1.679a.192.192,0,1,1,0-.383ZM11.852,9.135a.807.807,0,0,1-.807.805H8.928l0,0-5.37-.019L1.424,9.94a.806.806,0,0,1-.805-.805V3.063H11.852Z"
+                            transform="translate(-0.235 -0.267)"
+                            fill="#8e8e8e"
+                        />
+                        <path
+                            id="Path_22182"
+                            data-name="Path 22182"
+                            d="M6.566,7.229A1.132,1.132,0,1,1,5.435,6.1,1.132,1.132,0,0,1,6.566,7.229Z"
+                            transform="translate(0.578 0.898)"
+                            fill="#8e8e8e"
+                        />
                     </g>
                 </g>
             </g>
         </svg>
-
     );
 };
 
 export const BrokerFilterSvg = BrokerCardSvg;
 
 export const Iraq12svg = () => {
-    return (<svg id="Group_12682" data-name="Group 12682" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
-        <g id="Mask_Group_94" data-name="Mask Group 94" transform="translate(0 1.692)">
-            <g id="iraq" transform="translate(0.027 0)">
-                <path id="Path_16025" data-name="Path 16025" d="M10.686,1.716H.865A.908.908,0,0,0,0,2.662V4.473H11.552V2.662A.908.908,0,0,0,10.686,1.716Z" transform="translate(0 -1.716)" fill="#ff4b55" />
-                <path id="Path_16026" data-name="Path 16026" d="M0,7.876a.908.908,0,0,0,.865.946h9.821a.908.908,0,0,0,.865-.946V6.064H0Z" transform="translate(0 -0.55)" fill="#464655" />
-                <rect id="Rectangle_4603" data-name="Rectangle 4603" width="11.552" height="2.757" transform="translate(0 2.757)" fill="#f5f5f5" />
-                <g id="Group_4684" data-name="Group 4684" transform="translate(3.27 3.11)">
-                    <path id="Path_16027" data-name="Path 16027" d="M6,4.584c-.021-.012-.046-.055-.038-.073s0-.018.038,0a.163.163,0,0,0,.177-.034l.044-.038.05.028a.172.172,0,0,0,.066.022A.154.154,0,0,0,6.4,4.394c0-.03.019-.022.029.01a.156.156,0,0,1-.071.176.132.132,0,0,1-.089-.008c-.047-.02-.054-.02-.08,0a.166.166,0,0,1-.195.012" transform="translate(-2.314 -4.113)" fill="#73af00" />
-                    <path id="Path_16028" data-name="Path 16028" d="M6.168,4.41A.479.479,0,0,1,6.12,4.2c.009-.031.018-.036.042-.028.043.017.054.047.05.159-.008.084-.018.11-.043.078" transform="translate(-2.288 -4.169)" fill="#73af00" />
-                    <path id="Path_16029" data-name="Path 16029" d="M4.985,4.96c-.1.065-.261.077-.261.257-.229.009-.5.02-.741.015.066-.093.483-.514.656-.681a.113.113,0,0,0,.022-.119l0-.01A.086.086,0,0,0,4.6,4.373a.08.08,0,0,0-.073.024c-.173.181-.344.349-.372.378l-.324.358a.153.153,0,0,0-.039.1h0a.141.141,0,0,0,.134.146H4.9c.056,0-.013-.211.059-.211.05,0,.054.076.05.155a.106.106,0,0,1-.1.11c-.423,0-.864,0-1.278.006a.059.059,0,0,1-.044-.02.071.071,0,0,1-.018-.048V5.293a.088.088,0,0,0-.042-.076.074.074,0,0,0-.081,0l-.006,0a.08.08,0,0,0-.031.089.278.278,0,0,1,.011.076.065.065,0,0,1-.06.068c-.137,0-.286.006-.328-.082a.093.093,0,0,0-.051-.052.083.083,0,0,0-.07,0l-.006,0a.1.1,0,0,0-.049.062.113.113,0,0,0,.007.081.575.575,0,0,1,.073.371.245.245,0,0,1-.1.11.054.054,0,0,0-.019.064.047.047,0,0,0,.055.031.321.321,0,0,0,.239-.262h1.95a.136.136,0,0,0,.13-.142V5.185C5.175,5.048,5.039,5.053,4.985,4.96Z" transform="translate(-2.818 -4.114)" fill="#73af00" />
-                    <path id="Path_16030" data-name="Path 16030" d="M6.826,4.355a.791.791,0,0,0,.09.055.069.069,0,0,1,.035.044.076.076,0,0,1-.007.058.109.109,0,0,0-.013.033v.917a.128.128,0,0,0,.117-.019A.047.047,0,0,1,7.1,5.436a.054.054,0,0,1,.032.039c.02.08.05.159.07.23a.076.076,0,0,1-.011.061.063.063,0,0,1-.051.028H6.805a.053.053,0,0,1-.05-.055V4.4a.056.056,0,0,1,.025-.042A.047.047,0,0,1,6.826,4.355Z" transform="translate(-2.186 -4.12)" fill="#73af00" />
-                    <path id="Path_16031" data-name="Path 16031" d="M6.6,4.56c0,.253,0,.526,0,.8a.067.067,0,0,1-.017.045.056.056,0,0,1-.041.019h0a.061.061,0,0,1-.058-.063V4.715a.041.041,0,0,0-.022-.037.035.035,0,0,0-.04.006l-.077.073a.082.082,0,0,0-.025.059c0,.1,0,.409,0,.542a.061.061,0,0,1-.058.063h-.01a.061.061,0,0,1-.058-.063c0-.089,0-.253,0-.375a.042.042,0,0,0-.022-.037.035.035,0,0,0-.04.007,1.588,1.588,0,0,0-.14.141c0,.024.021,0,.031.019v.123c-.291-.06-.313.194-.3.467a.073.073,0,0,0,.07.073H6.7a.065.065,0,0,0,.062-.067V4.466a.048.048,0,0,0-.026-.044.041.041,0,0,0-.047.009L6.624,4.5A.089.089,0,0,0,6.6,4.56Zm-.673.852c-.018-.055.083-.077.095-.026s-.072.063-.094.026Z" transform="translate(-2.353 -4.102)" fill="#73af00" />
-                    <path id="Path_16032" data-name="Path 16032" d="M3.3,5.568a.067.067,0,0,1,.063.069.072.072,0,0,1-.018.049.06.06,0,0,1-.045.02.061.061,0,0,1-.046-.02.073.073,0,0,1-.019-.049A.068.068,0,0,1,3.3,5.568" transform="translate(-2.751 -3.793)" fill="#73af00" />
-                    <path id="Path_16033" data-name="Path 16033" d="M5.1,4.378a.586.586,0,0,0,.053.031.066.066,0,0,1,.033.042.073.073,0,0,1-.007.055.116.116,0,0,0-.015.036v.915a.124.124,0,0,0,.121-.021.044.044,0,0,1,.043-.007.05.05,0,0,1,.03.035c.015.062.038.124.056.182a.119.119,0,0,1-.014.1.1.1,0,0,1-.082.046H5.061a.079.079,0,0,1-.075-.082V4.45a.084.084,0,0,1,.038-.071A.07.07,0,0,1,5.1,4.378Z" transform="translate(-2.47 -4.115)" fill="#73af00" />
+    return (
+        <svg
+            id="Group_12682"
+            data-name="Group 12682"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+        >
+            <g id="Mask_Group_94" data-name="Mask Group 94" transform="translate(0 1.692)">
+                <g id="iraq" transform="translate(0.027 0)">
+                    <path
+                        id="Path_16025"
+                        data-name="Path 16025"
+                        d="M10.686,1.716H.865A.908.908,0,0,0,0,2.662V4.473H11.552V2.662A.908.908,0,0,0,10.686,1.716Z"
+                        transform="translate(0 -1.716)"
+                        fill="#ff4b55"
+                    />
+                    <path
+                        id="Path_16026"
+                        data-name="Path 16026"
+                        d="M0,7.876a.908.908,0,0,0,.865.946h9.821a.908.908,0,0,0,.865-.946V6.064H0Z"
+                        transform="translate(0 -0.55)"
+                        fill="#464655"
+                    />
+                    <rect
+                        id="Rectangle_4603"
+                        data-name="Rectangle 4603"
+                        width="11.552"
+                        height="2.757"
+                        transform="translate(0 2.757)"
+                        fill="#f5f5f5"
+                    />
+                    <g id="Group_4684" data-name="Group 4684" transform="translate(3.27 3.11)">
+                        <path
+                            id="Path_16027"
+                            data-name="Path 16027"
+                            d="M6,4.584c-.021-.012-.046-.055-.038-.073s0-.018.038,0a.163.163,0,0,0,.177-.034l.044-.038.05.028a.172.172,0,0,0,.066.022A.154.154,0,0,0,6.4,4.394c0-.03.019-.022.029.01a.156.156,0,0,1-.071.176.132.132,0,0,1-.089-.008c-.047-.02-.054-.02-.08,0a.166.166,0,0,1-.195.012"
+                            transform="translate(-2.314 -4.113)"
+                            fill="#73af00"
+                        />
+                        <path
+                            id="Path_16028"
+                            data-name="Path 16028"
+                            d="M6.168,4.41A.479.479,0,0,1,6.12,4.2c.009-.031.018-.036.042-.028.043.017.054.047.05.159-.008.084-.018.11-.043.078"
+                            transform="translate(-2.288 -4.169)"
+                            fill="#73af00"
+                        />
+                        <path
+                            id="Path_16029"
+                            data-name="Path 16029"
+                            d="M4.985,4.96c-.1.065-.261.077-.261.257-.229.009-.5.02-.741.015.066-.093.483-.514.656-.681a.113.113,0,0,0,.022-.119l0-.01A.086.086,0,0,0,4.6,4.373a.08.08,0,0,0-.073.024c-.173.181-.344.349-.372.378l-.324.358a.153.153,0,0,0-.039.1h0a.141.141,0,0,0,.134.146H4.9c.056,0-.013-.211.059-.211.05,0,.054.076.05.155a.106.106,0,0,1-.1.11c-.423,0-.864,0-1.278.006a.059.059,0,0,1-.044-.02.071.071,0,0,1-.018-.048V5.293a.088.088,0,0,0-.042-.076.074.074,0,0,0-.081,0l-.006,0a.08.08,0,0,0-.031.089.278.278,0,0,1,.011.076.065.065,0,0,1-.06.068c-.137,0-.286.006-.328-.082a.093.093,0,0,0-.051-.052.083.083,0,0,0-.07,0l-.006,0a.1.1,0,0,0-.049.062.113.113,0,0,0,.007.081.575.575,0,0,1,.073.371.245.245,0,0,1-.1.11.054.054,0,0,0-.019.064.047.047,0,0,0,.055.031.321.321,0,0,0,.239-.262h1.95a.136.136,0,0,0,.13-.142V5.185C5.175,5.048,5.039,5.053,4.985,4.96Z"
+                            transform="translate(-2.818 -4.114)"
+                            fill="#73af00"
+                        />
+                        <path
+                            id="Path_16030"
+                            data-name="Path 16030"
+                            d="M6.826,4.355a.791.791,0,0,0,.09.055.069.069,0,0,1,.035.044.076.076,0,0,1-.007.058.109.109,0,0,0-.013.033v.917a.128.128,0,0,0,.117-.019A.047.047,0,0,1,7.1,5.436a.054.054,0,0,1,.032.039c.02.08.05.159.07.23a.076.076,0,0,1-.011.061.063.063,0,0,1-.051.028H6.805a.053.053,0,0,1-.05-.055V4.4a.056.056,0,0,1,.025-.042A.047.047,0,0,1,6.826,4.355Z"
+                            transform="translate(-2.186 -4.12)"
+                            fill="#73af00"
+                        />
+                        <path
+                            id="Path_16031"
+                            data-name="Path 16031"
+                            d="M6.6,4.56c0,.253,0,.526,0,.8a.067.067,0,0,1-.017.045.056.056,0,0,1-.041.019h0a.061.061,0,0,1-.058-.063V4.715a.041.041,0,0,0-.022-.037.035.035,0,0,0-.04.006l-.077.073a.082.082,0,0,0-.025.059c0,.1,0,.409,0,.542a.061.061,0,0,1-.058.063h-.01a.061.061,0,0,1-.058-.063c0-.089,0-.253,0-.375a.042.042,0,0,0-.022-.037.035.035,0,0,0-.04.007,1.588,1.588,0,0,0-.14.141c0,.024.021,0,.031.019v.123c-.291-.06-.313.194-.3.467a.073.073,0,0,0,.07.073H6.7a.065.065,0,0,0,.062-.067V4.466a.048.048,0,0,0-.026-.044.041.041,0,0,0-.047.009L6.624,4.5A.089.089,0,0,0,6.6,4.56Zm-.673.852c-.018-.055.083-.077.095-.026s-.072.063-.094.026Z"
+                            transform="translate(-2.353 -4.102)"
+                            fill="#73af00"
+                        />
+                        <path
+                            id="Path_16032"
+                            data-name="Path 16032"
+                            d="M3.3,5.568a.067.067,0,0,1,.063.069.072.072,0,0,1-.018.049.06.06,0,0,1-.045.02.061.061,0,0,1-.046-.02.073.073,0,0,1-.019-.049A.068.068,0,0,1,3.3,5.568"
+                            transform="translate(-2.751 -3.793)"
+                            fill="#73af00"
+                        />
+                        <path
+                            id="Path_16033"
+                            data-name="Path 16033"
+                            d="M5.1,4.378a.586.586,0,0,0,.053.031.066.066,0,0,1,.033.042.073.073,0,0,1-.007.055.116.116,0,0,0-.015.036v.915a.124.124,0,0,0,.121-.021.044.044,0,0,1,.043-.007.05.05,0,0,1,.03.035c.015.062.038.124.056.182a.119.119,0,0,1-.014.1.1.1,0,0,1-.082.046H5.061a.079.079,0,0,1-.075-.082V4.45a.084.084,0,0,1,.038-.071A.07.07,0,0,1,5.1,4.378Z"
+                            transform="translate(-2.47 -4.115)"
+                            fill="#73af00"
+                        />
+                    </g>
                 </g>
             </g>
-        </g>
-        <rect id="Rectangle_4644" data-name="Rectangle 4644" width="11.723" height="12" transform="translate(0.277)" fill="none" />
-    </svg>
-    )
-}
+            <rect
+                id="Rectangle_4644"
+                data-name="Rectangle 4644"
+                width="11.723"
+                height="12"
+                transform="translate(0.277)"
+                fill="none"
+            />
+        </svg>
+    );
+};
 
 export const IraqSvg = () => {
     return (
-        <svg id="Group_12543" data-name="Group 12543" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="Group_12543"
+            data-name="Group 12543"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4601" data-name="Rectangle 4601" width="14.506" height="10.338" fill="none" />
+                    <rect
+                        id="Rectangle_4601"
+                        data-name="Rectangle 4601"
+                        width="14.506"
+                        height="10.338"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_94" data-name="Mask Group 94" transform="translate(0 2.116)" clip-path="url(#clip-path)">
+            <g
+                id="Mask_Group_94"
+                data-name="Mask Group 94"
+                transform="translate(0 2.116)"
+                clip-path="url(#clip-path)"
+            >
                 <g id="iraq" transform="translate(0.033 0)">
                     <path
                         id="Path_16025"
@@ -93,7 +214,14 @@ export const IraqSvg = () => {
                         transform="translate(0 0.828)"
                         fill="#464655"
                     />
-                    <rect id="Rectangle_4603" data-name="Rectangle 4603" width="14.44" height="3.446" transform="translate(0 3.446)" fill="#f5f5f5" />
+                    <rect
+                        id="Rectangle_4603"
+                        data-name="Rectangle 4603"
+                        width="14.44"
+                        height="3.446"
+                        transform="translate(0 3.446)"
+                        fill="#f5f5f5"
+                    />
                     <g id="Group_4684" data-name="Group 4684" transform="translate(4.087 3.888)">
                         <path
                             id="Path_16027"
@@ -147,7 +275,14 @@ export const IraqSvg = () => {
                     </g>
                 </g>
             </g>
-            <rect id="Rectangle_4644" data-name="Rectangle 4644" width="14.654" height="15" transform="translate(0.346)" fill="none" />
+            <rect
+                id="Rectangle_4644"
+                data-name="Rectangle 4644"
+                width="14.654"
+                height="15"
+                transform="translate(0.346)"
+                fill="none"
+            />
         </svg>
     );
 };
@@ -185,10 +320,22 @@ export const OneFilterSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" transform="translate(0 -0.001)" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        transform="translate(0 -0.001)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_238" data-name="Mask Group 238" transform="translate(0 0.001)" clip-path="url(#clip-path)">
+            <g
+                id="Mask_Group_238"
+                data-name="Mask Group 238"
+                transform="translate(0 0.001)"
+                clip-path="url(#clip-path)"
+            >
                 <g id="options" transform="translate(0 -0.041)">
                     <path
                         id="Path_19306"
@@ -211,7 +358,16 @@ export const OneFilterSvg = () => {
                         transform="translate(0.026 0.029)"
                         fill="#5d5d5d"
                     />
-                    <ellipse id="Ellipse_338" data-name="Ellipse 338" cx="1.922" cy="1.922" rx="1.922" ry="1.922" transform="translate(1.17)" fill="#5d5d5d" />
+                    <ellipse
+                        id="Ellipse_338"
+                        data-name="Ellipse 338"
+                        cx="1.922"
+                        cy="1.922"
+                        rx="1.922"
+                        ry="1.922"
+                        transform="translate(1.17)"
+                        fill="#5d5d5d"
+                    />
                     <ellipse
                         id="Ellipse_339"
                         data-name="Ellipse 339"
@@ -250,10 +406,22 @@ export const LocationSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" transform="translate(0 -0.001)" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        transform="translate(0 -0.001)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_208" data-name="Mask Group 208" transform="translate(0 0.001)" clip-path="url(#clip-path)">
+            <g
+                id="Mask_Group_208"
+                data-name="Mask Group 208"
+                transform="translate(0 0.001)"
+                clip-path="url(#clip-path)"
+            >
                 <path
                     id="location-pin"
                     d="M7.543,0A5.7,5.7,0,0,0,1.875,5.71C1.875,10.184,7.01,14.8,7.229,15a.473.473,0,0,0,.629,0c.219-.195,5.354-4.814,5.354-9.289A5.7,5.7,0,0,0,7.543,0Zm0,8.819a3.15,3.15,0,1,1,3.149-3.15A3.153,3.153,0,0,1,7.543,8.819Z"
@@ -270,7 +438,13 @@ export const UsersFilterSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_5814" data-name="Rectangle 5814" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_5814"
+                        data-name="Rectangle 5814"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_582" data-name="Mask Group 582" clip-path="url(#clip-path)">
@@ -296,9 +470,34 @@ export const UsersFilterSvg = () => {
                         transform="translate(-0.333 3.525)"
                         fill="#5d5d5d"
                     />
-                    <ellipse id="Ellipse_559" data-name="Ellipse 559" cx="2" cy="2" rx="2" ry="2" transform="translate(5.5)" fill="#5d5d5d" />
-                    <circle id="Ellipse_560" data-name="Ellipse 560" cx="2" cy="2" r="2" transform="translate(1.001 8)" fill="#5d5d5d" />
-                    <circle id="Ellipse_561" data-name="Ellipse 561" cx="2" cy="2" r="2" transform="translate(10.001 8)" fill="#5d5d5d" />
+                    <ellipse
+                        id="Ellipse_559"
+                        data-name="Ellipse 559"
+                        cx="2"
+                        cy="2"
+                        rx="2"
+                        ry="2"
+                        transform="translate(5.5)"
+                        fill="#5d5d5d"
+                    />
+                    <circle
+                        id="Ellipse_560"
+                        data-name="Ellipse 560"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(1.001 8)"
+                        fill="#5d5d5d"
+                    />
+                    <circle
+                        id="Ellipse_561"
+                        data-name="Ellipse 561"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(10.001 8)"
+                        fill="#5d5d5d"
+                    />
                     <path
                         id="Path_22425"
                         data-name="Path 22425"
@@ -314,10 +513,23 @@ export const UsersFilterSvg = () => {
 
 export const UserFilterSvg = () => {
     return (
-        <svg id="_15x15_photo_back" data-name="15x15 photo back" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="_15x15_photo_back"
+            data-name="15x15 photo back"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_173" data-name="Mask Group 173" clip-path="url(#clip-path)">
@@ -354,11 +566,23 @@ export const LinkFilterSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="15" height="15" transform="translate(0.382 0.001)" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="15"
+                        height="15"
+                        transform="translate(0.382 0.001)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12454" data-name="Group 12454" transform="translate(-0.382 -0.001)">
-                <g id="Mask_Group_385" data-name="Mask Group 385" transform="translate(0 0)" clip-path="url(#clip-path)">
+                <g
+                    id="Mask_Group_385"
+                    data-name="Mask Group 385"
+                    transform="translate(0 0)"
+                    clip-path="url(#clip-path)"
+                >
                     <g id="link" transform="translate(-1.114 0.456)">
                         <path
                             id="Path_21631"
@@ -386,11 +610,23 @@ export const WalletFilterSvg = ({ color = '#487CE0' }: { color?: string }) => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4612" data-name="Rectangle 4612" width="15" height="15" transform="translate(0.025)" fill="none" />
+                    <rect
+                        id="Rectangle_4612"
+                        data-name="Rectangle 4612"
+                        width="15"
+                        height="15"
+                        transform="translate(0.025)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12284" data-name="Group 12284" transform="translate(-0.025)">
-                <g id="Mask_Group_484" data-name="Mask Group 484" transform="translate(0)" clip-path="url(#clip-path)">
+                <g
+                    id="Mask_Group_484"
+                    data-name="Mask Group 484"
+                    transform="translate(0)"
+                    clip-path="url(#clip-path)"
+                >
                     <g id="digital-wallet-2" transform="translate(-0.198 2.103)">
                         <ellipse
                             id="Ellipse_456"
@@ -455,10 +691,23 @@ export const WalletFilterSvg = ({ color = '#487CE0' }: { color?: string }) => {
 
 export const CircleFilterSvg = () => {
     return (
-        <svg id="_15x15_photo_back" data-name="15x15 photo back" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="_15x15_photo_back"
+            data-name="15x15 photo back"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_239" data-name="Mask Group 239" clip-path="url(#clip-path)">
@@ -504,10 +753,23 @@ export const CircleFilterSvg = () => {
 
 export const CardFilterSvg = () => {
     return (
-        <svg id="_15x15_photo_back" data-name="15x15 photo back" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="_15x15_photo_back"
+            data-name="15x15 photo back"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_177" data-name="Mask Group 177" clip-path="url(#clip-path)">
@@ -567,11 +829,23 @@ export const BuildFilterSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="15" height="15" transform="translate(0.457)" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="15"
+                        height="15"
+                        transform="translate(0.457)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12455" data-name="Group 12455" transform="translate(-0.456)">
-                <g id="Mask_Group_243" data-name="Mask Group 243" transform="translate(0)" clip-path="url(#clip-path)">
+                <g
+                    id="Mask_Group_243"
+                    data-name="Mask Group 243"
+                    transform="translate(0)"
+                    clip-path="url(#clip-path)"
+                >
                     <g id="business-and-trade" transform="translate(1.139 0.056)">
                         <path
                             id="Path_19352"
@@ -599,11 +873,23 @@ export const TransactionFilterSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="15" height="15" transform="translate(-0.451)" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="15"
+                        height="15"
+                        transform="translate(-0.451)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12530" data-name="Group 12530" transform="translate(0.451)">
-                <g id="Mask_Group_485" data-name="Mask Group 485" transform="translate(0)" clip-path="url(#clip-path)">
+                <g
+                    id="Mask_Group_485"
+                    data-name="Mask Group 485"
+                    transform="translate(0)"
+                    clip-path="url(#clip-path)"
+                >
                     <g id="ethereum-2" transform="translate(0 0)">
                         <path
                             id="Path_22071"
@@ -633,7 +919,16 @@ export const TransactionFilterSvg = () => {
                             transform="translate(3.339 0.939)"
                             fill="#487ce0"
                         />
-                        <ellipse id="Ellipse_460" data-name="Ellipse 460" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(5.549)" fill="#487ce0" />
+                        <ellipse
+                            id="Ellipse_460"
+                            data-name="Ellipse 460"
+                            cx="1.5"
+                            cy="1"
+                            rx="1.5"
+                            ry="1"
+                            transform="translate(5.549)"
+                            fill="#487ce0"
+                        />
                         <path
                             id="Path_22075"
                             data-name="Path 22075"
@@ -662,7 +957,16 @@ export const TransactionFilterSvg = () => {
                             transform="translate(1.191 3.088)"
                             fill="#487ce0"
                         />
-                        <ellipse id="Ellipse_461" data-name="Ellipse 461" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(5.549 13)" fill="#487ce0" />
+                        <ellipse
+                            id="Ellipse_461"
+                            data-name="Ellipse 461"
+                            cx="1.5"
+                            cy="1"
+                            rx="1.5"
+                            ry="1"
+                            transform="translate(5.549 13)"
+                            fill="#487ce0"
+                        />
                         <path
                             id="Path_22079"
                             data-name="Path 22079"
@@ -670,10 +974,34 @@ export const TransactionFilterSvg = () => {
                             transform="translate(2.307 3.569)"
                             fill="#487ce0"
                         />
-                        <path id="Path_22080" data-name="Path 22080" d="M5.536,5.659l.739-.47L5.536,4.9" transform="translate(2.485 1.917)" fill="#487ce0" />
-                        <path id="Path_22081" data-name="Path 22081" d="M5.411,4.811V3.939l-.7,1.142" transform="translate(2.074 1.435)" fill="#487ce0" />
-                        <path id="Path_22082" data-name="Path 22082" d="M5.536,3.939v.873l.7.27" transform="translate(2.485 1.435)" fill="#487ce0" />
-                        <path id="Path_22083" data-name="Path 22083" d="M5.425,5.659V4.9l-.739.285" transform="translate(2.06 1.917)" fill="#487ce0" />
+                        <path
+                            id="Path_22080"
+                            data-name="Path 22080"
+                            d="M5.536,5.659l.739-.47L5.536,4.9"
+                            transform="translate(2.485 1.917)"
+                            fill="#487ce0"
+                        />
+                        <path
+                            id="Path_22081"
+                            data-name="Path 22081"
+                            d="M5.411,4.811V3.939l-.7,1.142"
+                            transform="translate(2.074 1.435)"
+                            fill="#487ce0"
+                        />
+                        <path
+                            id="Path_22082"
+                            data-name="Path 22082"
+                            d="M5.536,3.939v.873l.7.27"
+                            transform="translate(2.485 1.435)"
+                            fill="#487ce0"
+                        />
+                        <path
+                            id="Path_22083"
+                            data-name="Path 22083"
+                            d="M5.425,5.659V4.9l-.739.285"
+                            transform="translate(2.06 1.917)"
+                            fill="#487ce0"
+                        />
                         <path
                             id="Path_22084"
                             data-name="Path 22084"
@@ -695,7 +1023,16 @@ export const TransactionFilterSvg = () => {
                             transform="translate(2.162 2.636)"
                             fill="#487ce0"
                         />
-                        <ellipse id="Ellipse_462" data-name="Ellipse 462" cx="1" cy="1.5" rx="1" ry="1.5" transform="translate(12.549 6)" fill="#487ce0" />
+                        <ellipse
+                            id="Ellipse_462"
+                            data-name="Ellipse 462"
+                            cx="1"
+                            cy="1.5"
+                            rx="1"
+                            ry="1.5"
+                            transform="translate(12.549 6)"
+                            fill="#487ce0"
+                        />
                         <path
                             id="Path_22087"
                             data-name="Path 22087"
@@ -710,7 +1047,16 @@ export const TransactionFilterSvg = () => {
                             transform="translate(3.82 2.055)"
                             fill="#487ce0"
                         />
-                        <ellipse id="Ellipse_463" data-name="Ellipse 463" cx="1" cy="1.5" rx="1" ry="1.5" transform="translate(-0.451 6)" fill="#487ce0" />
+                        <ellipse
+                            id="Ellipse_463"
+                            data-name="Ellipse 463"
+                            cx="1"
+                            cy="1.5"
+                            rx="1"
+                            ry="1.5"
+                            transform="translate(-0.451 6)"
+                            fill="#487ce0"
+                        />
                     </g>
                 </g>
             </g>
@@ -720,7 +1066,12 @@ export const TransactionFilterSvg = () => {
 
 export const LogoSvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="234.143" height="58" viewBox="0 0 234.143 58">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="234.143"
+            height="58"
+            viewBox="0 0 234.143 58"
+        >
             <g id="Group_11966" data-name="Group 11966" transform="translate(-98.507 -451)">
                 <path
                     id="Path_21886"
@@ -739,6 +1090,26 @@ export const LogoSvg = () => {
                     />
                 </g>
             </g>
+        </svg>
+    );
+};
+
+export const MenuSvg = ({ color = '#404040' }: { color?: string }) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill={color}
+        >
+            <path
+                d="M3 12h18M3 6h18M3 18h18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
         </svg>
     );
 };
@@ -801,7 +1172,14 @@ export const LoaderSvg = ({ width = '235', duration, loading = false }: LoaderSv
         >
             <g id="Group_11964" data-name="Group 11964" transform="translate(-98 -529)">
                 <g id="Group_11963" data-name="Group 11963" transform="translate(0 10)">
-                    <g id="Rectangle_5503" data-name="Rectangle 5503" transform="translate(98 519)" fill="none" stroke="#707070" strokeWidth="0.5">
+                    <g
+                        id="Rectangle_5503"
+                        data-name="Rectangle 5503"
+                        transform="translate(98 519)"
+                        fill="none"
+                        stroke="#707070"
+                        strokeWidth="0.5"
+                    >
                         <rect width="235" height="5" rx="2.5" stroke="none" />
                         <rect x="0.25" y="0.25" width="234.5" height="4.5" rx="2.25" fill="none" />
                     </g>
@@ -821,7 +1199,12 @@ export const LoaderSvg = ({ width = '235', duration, loading = false }: LoaderSv
 };
 export const LogoIconSvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="102.253" height="27.649" viewBox="0 0 102.253 27.649">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="102.253"
+            height="27.649"
+            viewBox="0 0 102.253 27.649"
+        >
             <g id="Group_7961" data-name="Group 7961" transform="translate(-167 -874)">
                 <g id="Group_7959" data-name="Group 7959" transform="translate(3)">
                     <text
@@ -903,7 +1286,9 @@ export const LogoHeaderSvg = () => {
     return (
         <div className="flex items-center gap-1.5 select-none">
             <span className="text-[16px] font-bold tracking-tight text-[#404040]">Trydos</span>
-            <span className="text-[14px] font-medium text-[#404040] opacity-80 pt-0.5">Wallet Portal</span>
+            <span className="text-[14px] font-medium text-[#404040] opacity-80 pt-0.5">
+                Wallet Portal
+            </span>
         </div>
     );
 };
@@ -913,16 +1298,34 @@ export const LogoContactSupportSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="89" height="30" viewBox="0 0 89 30">
             <defs>
                 <clipPath id="clipPath">
-                    <rect id="Rectangle_4536" data-name="Rectangle 4536" width="14" height="14" fill="none" />
+                    <rect
+                        id="Rectangle_4536"
+                        data-name="Rectangle 4536"
+                        width="14"
+                        height="14"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12082" data-name="Group 12082" transform="translate(-36 -877)">
-                <g id="Rectangle_5475" data-name="Rectangle 5475" transform="translate(36 877)" fill="#f4f5f5" stroke="#29a71a" strokeWidth="0.5">
+                <g
+                    id="Rectangle_5475"
+                    data-name="Rectangle 5475"
+                    transform="translate(36 877)"
+                    fill="#f4f5f5"
+                    stroke="#29a71a"
+                    strokeWidth="0.5"
+                >
                     <rect width="89" height="30" rx="10" stroke="none" />
                     <rect x="0.25" y="0.25" width="88.5" height="29.5" rx="9.75" fill="none" />
                 </g>
                 <g id="Group_12080" data-name="Group 12080" transform="translate(-6 2)">
-                    <g id="Mask_Group_255" data-name="Mask Group 255" transform="translate(52 883)" clipPath="url(#clipPath)">
+                    <g
+                        id="Mask_Group_255"
+                        data-name="Mask Group 255"
+                        transform="translate(52 883)"
+                        clipPath="url(#clipPath)"
+                    >
                         <g id="Layer_2" data-name="Layer 2" transform="translate(0 -0.322)">
                             <g id="_08.whatsapp" data-name="08.whatsapp">
                                 <path
@@ -965,71 +1368,182 @@ export const LogoContactSupportSvg = () => {
 
 export const DepositSvg = () => {
     return (
-        <svg id="Group_11972" data-name="Group 11972" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <svg
+            id="Group_11972"
+            data-name="Group 11972"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+        >
             <path
                 id="Path_21915"
                 data-name="Path 21915"
                 d="M12.516,10A2.516,2.516,0,1,0,10,12.516,2.52,2.52,0,0,0,12.516,10ZM10,11.533A1.533,1.533,0,1,1,11.533,10,1.536,1.536,0,0,1,10,11.533Z"
                 fill="#404040"
             ></path>
-            <path id="Path_21916" data-name="Path 21916" d="M6.357,9.508A.492.492,0,1,0,6.848,10,.493.493,0,0,0,6.357,9.508Z" fill="#404040"></path>
-            <path id="Path_21917" data-name="Path 21917" d="M4.254,10a.492.492,0,1,0,.492-.492A.493.493,0,0,0,4.254,10Z" fill="#404040"></path>
+            <path
+                id="Path_21916"
+                data-name="Path 21916"
+                d="M6.357,9.508A.492.492,0,1,0,6.848,10,.493.493,0,0,0,6.357,9.508Z"
+                fill="#404040"
+            ></path>
+            <path
+                id="Path_21917"
+                data-name="Path 21917"
+                d="M4.254,10a.492.492,0,1,0,.492-.492A.493.493,0,0,0,4.254,10Z"
+                fill="#404040"
+            ></path>
             <path
                 id="Path_21918"
                 data-name="Path 21918"
                 d="M3.627,10a1.814,1.814,0,1,0-1.811,1.816A1.819,1.819,0,0,0,3.627,10Zm-1.811.832A.832.832,0,1,1,2.648,10,.833.833,0,0,1,1.816,10.832Z"
                 fill="#404040"
             ></path>
-            <circle id="Ellipse_427" data-name="Ellipse 427" cx="0.492" cy="0.492" r="0.492" transform="translate(14.762 9.508)" fill="#404040"></circle>
-            <path id="Path_21919" data-name="Path 21919" d="M13.643,10.492A.492.492,0,1,0,13.152,10,.493.493,0,0,0,13.643,10.492Z" fill="#404040"></path>
+            <circle
+                id="Ellipse_427"
+                data-name="Ellipse 427"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(14.762 9.508)"
+                fill="#404040"
+            ></circle>
+            <path
+                id="Path_21919"
+                data-name="Path 21919"
+                d="M13.643,10.492A.492.492,0,1,0,13.152,10,.493.493,0,0,0,13.643,10.492Z"
+                fill="#404040"
+            ></path>
             <path
                 id="Path_21920"
                 data-name="Path 21920"
                 d="M18.184,8.184A1.816,1.816,0,1,0,20,10,1.819,1.819,0,0,0,18.184,8.184Zm0,2.648A.832.832,0,1,1,19.016,10,.833.833,0,0,1,18.184,10.832Z"
                 fill="#404040"
             ></path>
-            <path id="Path_21921" data-name="Path 21921" d="M10,13.152a.492.492,0,1,0,.492.492A.493.493,0,0,0,10,13.152Z" fill="#404040"></path>
-            <path id="Path_21922" data-name="Path 21922" d="M10,14.762a.492.492,0,1,0,.492.492A.493.493,0,0,0,10,14.762Z" fill="#404040"></path>
+            <path
+                id="Path_21921"
+                data-name="Path 21921"
+                d="M10,13.152a.492.492,0,1,0,.492.492A.493.493,0,0,0,10,13.152Z"
+                fill="#404040"
+            ></path>
+            <path
+                id="Path_21922"
+                data-name="Path 21922"
+                d="M10,14.762a.492.492,0,1,0,.492.492A.493.493,0,0,0,10,14.762Z"
+                fill="#404040"
+            ></path>
             <path
                 id="Path_21923"
                 data-name="Path 21923"
                 d="M10,16.373a1.814,1.814,0,1,0,1.816,1.811A1.819,1.819,0,0,0,10,16.373Zm0,2.643a.832.832,0,1,1,.832-.832A.833.833,0,0,1,10,19.016Z"
                 fill="#404040"
             ></path>
-            <path id="Path_21924" data-name="Path 21924" d="M10,6.848a.492.492,0,1,0-.492-.492A.493.493,0,0,0,10,6.848Z" fill="#404040"></path>
-            <circle id="Ellipse_428" data-name="Ellipse 428" cx="0.492" cy="0.492" r="0.492" transform="translate(9.508 4.254)" fill="#404040"></circle>
+            <path
+                id="Path_21924"
+                data-name="Path 21924"
+                d="M10,6.848a.492.492,0,1,0-.492-.492A.493.493,0,0,0,10,6.848Z"
+                fill="#404040"
+            ></path>
+            <circle
+                id="Ellipse_428"
+                data-name="Ellipse 428"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(9.508 4.254)"
+                fill="#404040"
+            ></circle>
             <path
                 id="Path_21925"
                 data-name="Path 21925"
                 d="M10,3.627A1.814,1.814,0,1,0,8.184,1.816,1.819,1.819,0,0,0,10,3.627ZM10,.984a.832.832,0,1,1-.832.832A.833.833,0,0,1,10,.984Z"
                 fill="#404040"
             ></path>
-            <path id="Path_21926" data-name="Path 21926" d="M7.078,12.23a.493.493,0,1,0,.7,0A.492.492,0,0,0,7.078,12.23Z" fill="#404040"></path>
-            <circle id="Ellipse_429" data-name="Ellipse 429" cx="0.492" cy="0.492" r="0.492" transform="translate(5.795 13.221)" fill="#404040"></circle>
+            <path
+                id="Path_21926"
+                data-name="Path 21926"
+                d="M7.078,12.23a.493.493,0,1,0,.7,0A.492.492,0,0,0,7.078,12.23Z"
+                fill="#404040"
+            ></path>
+            <circle
+                id="Ellipse_429"
+                data-name="Ellipse 429"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(5.795 13.221)"
+                fill="#404040"
+            ></circle>
             <path
                 id="Path_21927"
                 data-name="Path 21927"
                 d="M2.93,14.5a1.814,1.814,0,1,0,2.566,0A1.813,1.813,0,0,0,2.93,14.5ZM4.8,16.377a.829.829,0,1,1,0-1.172A.829.829,0,0,1,4.8,16.377Z"
                 fill="#404040"
             ></path>
-            <circle id="Ellipse_430" data-name="Ellipse 430" cx="0.492" cy="0.492" r="0.492" transform="translate(13.221 5.795)" fill="#404040"></circle>
-            <circle id="Ellipse_431" data-name="Ellipse 431" cx="0.492" cy="0.492" r="0.492" transform="translate(12.086 6.93)" fill="#404040"></circle>
+            <circle
+                id="Ellipse_430"
+                data-name="Ellipse 430"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(13.221 5.795)"
+                fill="#404040"
+            ></circle>
+            <circle
+                id="Ellipse_431"
+                data-name="Ellipse 431"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(12.086 6.93)"
+                fill="#404040"
+            ></circle>
             <path
                 id="Path_21928"
                 data-name="Path 21928"
                 d="M17.07,5.5a1.814,1.814,0,1,0-2.566,0A1.813,1.813,0,0,0,17.07,5.5ZM15.2,3.623a.829.829,0,1,1,0,1.172A.829.829,0,0,1,15.2,3.623Z"
                 fill="#404040"
             ></path>
-            <circle id="Ellipse_432" data-name="Ellipse 432" cx="0.492" cy="0.492" r="0.492" transform="translate(13.221 13.221)" fill="#404040"></circle>
-            <path id="Path_21929" data-name="Path 21929" d="M12.23,12.23a.493.493,0,1,0,.7,0A.492.492,0,0,0,12.23,12.23Z" fill="#404040"></path>
+            <circle
+                id="Ellipse_432"
+                data-name="Ellipse 432"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(13.221 13.221)"
+                fill="#404040"
+            ></circle>
+            <path
+                id="Path_21929"
+                data-name="Path 21929"
+                d="M12.23,12.23a.493.493,0,1,0,.7,0A.492.492,0,0,0,12.23,12.23Z"
+                fill="#404040"
+            ></path>
             <path
                 id="Path_21930"
                 data-name="Path 21930"
                 d="M14.5,14.5a1.814,1.814,0,1,0,2.566,0A1.813,1.813,0,0,0,14.5,14.5Zm1.873,1.873a.829.829,0,1,1,0-1.172A.829.829,0,0,1,16.377,16.377Z"
                 fill="#404040"
             ></path>
-            <circle id="Ellipse_433" data-name="Ellipse 433" cx="0.492" cy="0.492" r="0.492" transform="translate(6.93 6.93)" fill="#404040"></circle>
-            <circle id="Ellipse_434" data-name="Ellipse 434" cx="0.492" cy="0.492" r="0.492" transform="translate(5.795 5.795)" fill="#404040"></circle>
+            <circle
+                id="Ellipse_433"
+                data-name="Ellipse 433"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(6.93 6.93)"
+                fill="#404040"
+            ></circle>
+            <circle
+                id="Ellipse_434"
+                data-name="Ellipse 434"
+                cx="0.492"
+                cy="0.492"
+                r="0.492"
+                transform="translate(5.795 5.795)"
+                fill="#404040"
+            ></circle>
             <path
                 id="Path_21931"
                 data-name="Path 21931"
@@ -1064,7 +1578,14 @@ export const TokenLoaderSvg = ({ loading = false }: { loading?: boolean }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
             <g id="Group_11948" data-name="Group 11948" transform="translate(-50 -243)">
-                <g id="Ellipse_427" data-name="Ellipse 427" transform="translate(50 243)" fill="none" stroke="#8e8e8e" strokeWidth="0.5">
+                <g
+                    id="Ellipse_427"
+                    data-name="Ellipse 427"
+                    transform="translate(50 243)"
+                    fill="none"
+                    stroke="#8e8e8e"
+                    strokeWidth="0.5"
+                >
                     <circle cx="15" cy="15" r="15" stroke="none" />
                     <circle cx="15" cy="15" r="14.75" fill="none" />
                 </g>
@@ -1085,8 +1606,23 @@ export const TokenLoaderSvg = ({ loading = false }: { loading?: boolean }) => {
 
 export const TrueGreenSvg = ({ w, h }: { w?: string; h?: string }) => {
     return (
-        <svg id="Component_98_2" data-name="Component 98 – 2" xmlns="http://www.w3.org/2000/svg" width={w || '15'} height={h || '15'} viewBox="0 0 15 15">
-            <circle id="Ellipse_417" data-name="Ellipse 417" cx="5.685" cy="5.685" r="5.685" transform="translate(0 2.889)" fill="#b0ef8f" />
+        <svg
+            id="Component_98_2"
+            data-name="Component 98 – 2"
+            xmlns="http://www.w3.org/2000/svg"
+            width={w || '15'}
+            height={h || '15'}
+            viewBox="0 0 15 15"
+        >
+            <circle
+                id="Ellipse_417"
+                data-name="Ellipse 417"
+                cx="5.685"
+                cy="5.685"
+                r="5.685"
+                transform="translate(0 2.889)"
+                fill="#b0ef8f"
+            />
             <path
                 id="Path_21683"
                 data-name="Path 21683"
@@ -1094,7 +1630,13 @@ export const TrueGreenSvg = ({ w, h }: { w?: string; h?: string }) => {
                 transform="translate(-1.086 -0.756)"
                 fill="#009045"
             />
-            <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" fill="none" />
+            <rect
+                id="Rectangle_4561"
+                data-name="Rectangle 4561"
+                width="15"
+                height="15"
+                fill="none"
+            />
         </svg>
     );
 };
@@ -1117,7 +1659,14 @@ export const CopySvg = ({ color = '#cecdcd' }: { color?: string }) => {
                         fill={color}
                     ></path>
                 </g>
-                <rect id="Rectangle_5486" data-name="Rectangle 5486" width="15" height="15" transform="translate(343 399)" fill="none"></rect>
+                <rect
+                    id="Rectangle_5486"
+                    data-name="Rectangle 5486"
+                    width="15"
+                    height="15"
+                    transform="translate(343 399)"
+                    fill="none"
+                ></rect>
             </g>
         </svg>
     );
@@ -1174,69 +1723,153 @@ export const LoadingNewColorSvg = ({ w = '19', h = '19', loading = false, color 
                 display: 'block',
                 background: 'transparent',
                 maxWidth: '100%',
-                maxHeight: '100%'
+                maxHeight: '100%',
             }}
             xmlnsXlink="http://www.w3.org/1999/xlink"
         >
             <g>
                 <g transform="rotate(0 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.9166666666666666s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.9166666666666666s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(30 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.8333333333333334s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.8333333333333334s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(60 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.75s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.75s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(90 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.6666666666666666s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.6666666666666666s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(120 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.5833333333333334s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.5833333333333334s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(150 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.5s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.5s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(180 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.4166666666666667s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.4166666666666667s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(210 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.3333333333333333s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.3333333333333333s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(240 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.25s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.25s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(270 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.16666666666666666s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.16666666666666666s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(300 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="-0.08333333333333333s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="-0.08333333333333333s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
                 <g transform="rotate(330 50 50)">
                     <rect fill={color} height={h} width={10} ry="5" rx={5} y={5} x={45}>
-                        <animate repeatCount="indefinite" begin="0s" dur="1s" keyTimes="0;1" values="1;0" attributeName="opacity" />
+                        <animate
+                            repeatCount="indefinite"
+                            begin="0s"
+                            dur="1s"
+                            keyTimes="0;1"
+                            values="1;0"
+                            attributeName="opacity"
+                        />
                     </rect>
                 </g>
             </g>
@@ -1249,10 +1882,22 @@ export const WhatsappSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clipPath">
-                    <rect id="Rectangle_4536" data-name="Rectangle 4536" width="15" height="15" transform="translate(0 0.181)" fill="none" />
+                    <rect
+                        id="Rectangle_4536"
+                        data-name="Rectangle 4536"
+                        width="15"
+                        height="15"
+                        transform="translate(0 0.181)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_255" data-name="Mask Group 255" transform="translate(0 -0.181)" clipPath="url(#clipPath)">
+            <g
+                id="Mask_Group_255"
+                data-name="Mask Group 255"
+                transform="translate(0 -0.181)"
+                clipPath="url(#clipPath)"
+            >
                 <g id="Layer_2" data-name="Layer 2" transform="translate(0 -0.093)">
                     <g id="_08.whatsapp" data-name="08.whatsapp">
                         <path
@@ -1286,10 +1931,22 @@ export const WhatsappSvg = () => {
 
 export const ScanQrSvg = ({ className, w }: { w?: string; className?: string }) => {
     return (
-        <svg className={className} xmlns="http://www.w3.org/2000/svg" width={w || '330'} height="10" viewBox="0 0 330 10">
+        <svg
+            className={className}
+            xmlns="http://www.w3.org/2000/svg"
+            width={w || '330'}
+            height="10"
+            viewBox="0 0 330 10"
+        >
             <g id="Group_11964" data-name="Group 11964" transform="translate(-97.561 -529)">
                 <g id="Group_11963" data-name="Group 11963" transform="translate(97.561 529)">
-                    <g id="Rectangle_5503" data-name="Rectangle 5503" fill="#8db4ff" stroke="#707070" strokeWidth="0.5">
+                    <g
+                        id="Rectangle_5503"
+                        data-name="Rectangle 5503"
+                        fill="#8db4ff"
+                        stroke="#707070"
+                        strokeWidth="0.5"
+                    >
                         <rect width="330" height="10" rx="5" stroke="none" />
                         <rect x="0.25" y="0.25" width="329.5" height="9.5" rx="4.75" fill="none" />
                     </g>
@@ -1301,7 +1958,11 @@ export const ScanQrSvg = ({ className, w }: { w?: string; className?: string }) 
 
 export const TrustWalletSvg = () => {
     return (
-        <svg className="ml-[5px] w-[20px] h-[20px]" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+        <svg
+            className="ml-[5px] w-[20px] h-[20px]"
+            viewBox="0 0 14 14"
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -1373,7 +2034,13 @@ export const MetamaskSvg = () => {
 };
 export const NewTabtSvg = ({ color }: { color: string }) => {
     return (
-        <svg width="13" height="13" viewBox="0 0 13 13" fill={color} xmlns="http://www.w3.org/2000/svg">
+        <svg
+            width="13"
+            height="13"
+            viewBox="0 0 13 13"
+            fill={color}
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <path d="M4.3 2.08h1.85a.643.643 0 010 1.286H4.328c-.54 0-.903 0-1.181.026-.27.024-.397.067-.481.115a1.071 1.071 0 00-.4.4c-.048.084-.091.211-.115.48-.025.279-.026.642-.026 1.182v3.942c0 .54 0 .903.026 1.182.024.27.067.396.115.48.095.167.233.305.4.4.084.048.211.091.48.115.279.025.642.026 1.182.026h3.64c.54 0 .904 0 1.182-.026.27-.024.397-.067.48-.115a1.07 1.07 0 00.4-.4c.049-.084.092-.21.116-.48.025-.279.025-.641.025-1.182v-1.97a.643.643 0 011.286 0V9.54c0 .504 0 .925-.03 1.268-.033.357-.102.692-.28 1.002-.209.367-.512.671-.88.88-.31.177-.644.247-1.002.28-.343.03-.763.03-1.268.03H4.3c-.504 0-.925 0-1.267-.03-.358-.033-.693-.103-1.003-.28a2.357 2.357 0 01-.88-.88c-.177-.31-.247-.645-.279-1.003-.03-.342-.03-.763-.03-1.267v-4c0-.504 0-.925.03-1.267.032-.358.102-.693.279-1.003.21-.367.513-.67.88-.88.31-.177.645-.247 1.003-.279.342-.03.763-.03 1.267-.03z"></path>
             <path d="M9.122 1.144a.643.643 0 01.636-.65l3.073.014.015 3.173a.643.643 0 01-.63.656.643.643 0 01-.635-.65l-.005-.956-5.088 5.27a.619.619 0 01-.894.001.668.668 0 01-.002-.923l5.093-5.275-.933-.004a.643.643 0 01-.63-.656z"></path>
         </svg>
@@ -1381,17 +2048,45 @@ export const NewTabtSvg = ({ color }: { color: string }) => {
 };
 export const ReturnSvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="45px" height="35px" version="1.1" viewBox="0 0 100 100" fill="#70a0ed">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="45px"
+            height="35px"
+            version="1.1"
+            viewBox="0 0 100 100"
+            fill="#70a0ed"
+        >
             <path d="M72.273,37.652H14.071l9.225-8.572l-2.046-2.197L8.055,39.149l13.194,12.27l2.046-2.197l-9.219-8.569h58.197  c9.711,0,17.612,7.9,17.612,17.612s-7.901,17.612-17.612,17.612v3c11.366,0,20.612-9.247,20.612-20.612  C92.886,46.899,83.639,37.652,72.273,37.652z" />
         </svg>
     );
 };
-export const TransactionLogoSvg = ({ color = '#fafafa', w = '15', h = '15' }: { color?: string; w?: string; h?: string }) => {
+export const TransactionLogoSvg = ({
+    color = '#fafafa',
+    w = '15',
+    h = '15',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
-        <svg id="Group_12130" data-name="Group 12130" xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 15 15">
+        <svg
+            id="Group_12130"
+            data-name="Group 12130"
+            xmlns="http://www.w3.org/2000/svg"
+            width={w}
+            height={h}
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clipPath">
-                    <rect id="Rectangle_4536" data-name="Rectangle 4536" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4536"
+                        data-name="Rectangle 4536"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_221" data-name="Mask Group 221" clipPath="url(#clipPath)">
@@ -1420,7 +2115,13 @@ export const PartnerLogoSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clipPath">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_507" data-name="Mask Group 507" clipPath="url(#clipPath)">
@@ -1446,9 +2147,33 @@ export const PartnerLogoSvg = () => {
                         transform="translate(-0.333 3.523)"
                         fill="#fcfcfc"
                     />
-                    <circle id="Ellipse_484" data-name="Ellipse 484" cx="2" cy="2" r="2" transform="translate(5.5)" fill="#fcfcfc" />
-                    <circle id="Ellipse_485" data-name="Ellipse 485" cx="2" cy="2" r="2" transform="translate(1 8)" fill="#fcfcfc" />
-                    <circle id="Ellipse_486" data-name="Ellipse 486" cx="2" cy="2" r="2" transform="translate(10 8)" fill="#fcfcfc" />
+                    <circle
+                        id="Ellipse_484"
+                        data-name="Ellipse 484"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(5.5)"
+                        fill="#fcfcfc"
+                    />
+                    <circle
+                        id="Ellipse_485"
+                        data-name="Ellipse 485"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(1 8)"
+                        fill="#fcfcfc"
+                    />
+                    <circle
+                        id="Ellipse_486"
+                        data-name="Ellipse 486"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(10 8)"
+                        fill="#fcfcfc"
+                    />
                     <path
                         id="Path_22186"
                         data-name="Path 22186"
@@ -1461,18 +2186,41 @@ export const PartnerLogoSvg = () => {
         </svg>
     );
 };
-export const WalletLogoSvg = ({ color = '#487CE0', w = '15', h = '15' }: { color?: string; w?: string; h?: string }) => {
+export const WalletLogoSvg = ({
+    color = '#487CE0',
+    w = '15',
+    h = '15',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 15 15">
             <defs>
                 <clipPath id="clipPath">
-                    <rect id="Rectangle_4612" data-name="Rectangle 4612" width="15" height="15" transform="translate(0 0.473)" fill="none" />
+                    <rect
+                        id="Rectangle_4612"
+                        data-name="Rectangle 4612"
+                        width="15"
+                        height="15"
+                        transform="translate(0 0.473)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12366" data-name="Group 12366" transform="translate(0 -0.473)">
                 <g id="Mask_Group_484" data-name="Mask Group 484" clipPath="url(#clipPath)">
                     <g id="digital-wallet-2" transform="translate(-0.262 2.169)">
-                        <circle id="Ellipse_456" data-name="Ellipse 456" cx="0.582" cy="0.582" r="0.582" transform="translate(12.115 5.342)" fill={color} />
+                        <circle
+                            id="Ellipse_456"
+                            data-name="Ellipse 456"
+                            cx="0.582"
+                            cy="0.582"
+                            r="0.582"
+                            transform="translate(12.115 5.342)"
+                            fill={color}
+                        />
                         <path
                             id="Path_22069"
                             data-name="Path 22069"
@@ -1487,21 +2235,66 @@ export const WalletLogoSvg = ({ color = '#487CE0', w = '15', h = '15' }: { color
                             transform="translate(-0.756 -3.053)"
                             fill={color}
                         />
-                        <circle id="Ellipse_457" data-name="Ellipse 457" cx="0.582" cy="0.582" r="0.582" transform="translate(3.858 8.443)" fill={color} />
-                        <circle id="Ellipse_458" data-name="Ellipse 458" cx="0.582" cy="0.582" r="0.582" transform="translate(3.858 2.24)" fill={color} />
-                        <circle id="Ellipse_459" data-name="Ellipse 459" cx="0.582" cy="0.582" r="0.582" transform="translate(3.858 5.342)" fill={color} />
+                        <circle
+                            id="Ellipse_457"
+                            data-name="Ellipse 457"
+                            cx="0.582"
+                            cy="0.582"
+                            r="0.582"
+                            transform="translate(3.858 8.443)"
+                            fill={color}
+                        />
+                        <circle
+                            id="Ellipse_458"
+                            data-name="Ellipse 458"
+                            cx="0.582"
+                            cy="0.582"
+                            r="0.582"
+                            transform="translate(3.858 2.24)"
+                            fill={color}
+                        />
+                        <circle
+                            id="Ellipse_459"
+                            data-name="Ellipse 459"
+                            cx="0.582"
+                            cy="0.582"
+                            r="0.582"
+                            transform="translate(3.858 5.342)"
+                            fill={color}
+                        />
                     </g>
                 </g>
             </g>
         </svg>
     );
 };
-export const BlackListLogoSvg = ({ w = '10', h = '10', color = '#d15241' }: { w?: string; h?: string; color?: string }) => {
+export const BlackListLogoSvg = ({
+    w = '10',
+    h = '10',
+    color = '#d15241',
+}: {
+    w?: string;
+    h?: string;
+    color?: string;
+}) => {
     return (
-        <svg id="_10x10_flag_photo" data-name="10x10 flag photo" xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 10 10">
+        <svg
+            id="_10x10_flag_photo"
+            data-name="10x10 flag photo"
+            xmlns="http://www.w3.org/2000/svg"
+            width={w}
+            height={h}
+            viewBox="0 0 10 10"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width={w} height={h} fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width={w}
+                        height={h}
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_503" data-name="Mask Group 503" clip-path="url(#clip-path)">
@@ -1516,10 +2309,22 @@ export const BlackListLogoSvg = ({ w = '10', h = '10', color = '#d15241' }: { w?
 };
 export const WarnLogoSvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+        >
             <defs>
                 <clipPath id="">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="21" height="21" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="21"
+                        height="21"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_505" data-name="Mask Group 505">
@@ -1538,7 +2343,15 @@ export const WarnLogoSvg = () => {
                         transform="translate(0 -0.532)"
                         fill="#360535"
                     />
-                    <circle id="Ellipse_483" data-name="Ellipse 483" cx="1.102" cy="1.102" r="1.102" transform="translate(9.398 13.988)" fill="#fff" />
+                    <circle
+                        id="Ellipse_483"
+                        data-name="Ellipse 483"
+                        cx="1.102"
+                        cy="1.102"
+                        r="1.102"
+                        transform="translate(9.398 13.988)"
+                        fill="#fff"
+                    />
                     <path
                         id="Path_22178"
                         data-name="Path 22178"
@@ -1565,9 +2378,23 @@ export const WarnLogoSvg = () => {
         </svg>
     );
 };
-export const ClockSvg = ({ color = '#404040', w = '14', h = '14' }: { color?: string; w?: string; h?: string }) => {
+export const ClockSvg = ({
+    color = '#404040',
+    w = '14',
+    h = '14',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
-        <svg id="deadline" xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 14 14">
+        <svg
+            id="deadline"
+            xmlns="http://www.w3.org/2000/svg"
+            width={w}
+            height={h}
+            viewBox="0 0 14 14"
+        >
             <path
                 id="Path_19125"
                 data-name="Path 19125"
@@ -1625,10 +2452,22 @@ export const RamaazPoweredSvg = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" viewBox="0 0 130 20">
             <defs>
                 <clipPath id="clip">
-                    <rect id="Rectangle_5628" data-name="Rectangle 5628" width="130" height="20" transform="translate(40 959)" fill="none" />
+                    <rect
+                        id="Rectangle_5628"
+                        data-name="Rectangle 5628"
+                        width="130"
+                        height="20"
+                        transform="translate(40 959)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_509" data-name="Mask Group 509" transform="translate(-40 -959)" clipPath="url(#clip)">
+            <g
+                id="Mask_Group_509"
+                data-name="Mask Group 509"
+                transform="translate(-40 -959)"
+                clipPath="url(#clip)"
+            >
                 <g id="Group_7938" data-name="Group 7938" transform="translate(38.361 162.969)">
                     <path
                         id="Path_22188"
@@ -1637,7 +2476,11 @@ export const RamaazPoweredSvg = () => {
                         transform="translate(24.637 800.715)"
                         fill="#404040"
                     />
-                    <g id="Group_7937" data-name="Group 7937" transform="translate(-96.907 179.853)">
+                    <g
+                        id="Group_7937"
+                        data-name="Group 7937"
+                        transform="translate(-96.907 179.853)"
+                    >
                         <path
                             id="Path_16119"
                             data-name="Path 16119"
@@ -1645,7 +2488,11 @@ export const RamaazPoweredSvg = () => {
                             transform="translate(118.875 656.799)"
                             fill="#404040"
                         />
-                        <g id="Group_7932" data-name="Group 7932" transform="translate(157.409 622.505)">
+                        <g
+                            id="Group_7932"
+                            data-name="Group 7932"
+                            transform="translate(157.409 622.505)"
+                        >
                             <path
                                 id="Path_16118"
                                 data-name="Path 16118"
@@ -1675,7 +2522,11 @@ export const RamaazPoweredSvg = () => {
                                 fill="#555"
                             />
                         </g>
-                        <g id="Group_7936" data-name="Group 7936" transform="translate(200.488 622.505)">
+                        <g
+                            id="Group_7936"
+                            data-name="Group 7936"
+                            transform="translate(200.488 622.505)"
+                        >
                             <g id="Group_7935" data-name="Group 7935">
                                 <path
                                     id="Ellipse_321"
@@ -1700,7 +2551,13 @@ export const RamaazPoweredSvg = () => {
 };
 export const WallClockSvg = () => {
     return (
-        <svg id="wall-clock" xmlns="http://www.w3.org/2000/svg" width="50.002" height="50.002" viewBox="0 0 50.002 50.002">
+        <svg
+            id="wall-clock"
+            xmlns="http://www.w3.org/2000/svg"
+            width="50.002"
+            height="50.002"
+            viewBox="0 0 50.002 50.002"
+        >
             <path
                 id="Path_19251"
                 data-name="Path 19251"
@@ -1719,7 +2576,12 @@ export const WallClockSvg = () => {
 };
 export const PoweredBySvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="102.252" height="27.648" viewBox="0 0 102.252 27.648">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="102.252"
+            height="27.648"
+            viewBox="0 0 102.252 27.648"
+        >
             <g id="Group_7938" data-name="Group 7938" transform="translate(-30 -966)">
                 <text
                     id="powered_by"
@@ -1798,10 +2660,23 @@ export const PoweredBySvg = () => {
 
 export const SearchSvg = () => {
     return (
-        <svg id="_15x15_photo_back" data-name="15x15 photo back" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="_15x15_photo_back"
+            data-name="15x15 photo back"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_165" data-name="Mask Group 165" clipPath="url(#clip-path)">
@@ -1820,10 +2695,23 @@ export const SearchSvg = () => {
 };
 export const RefreshSvg = () => {
     return (
-        <svg id="_15x15_photo_back" data-name="15x15 photo back" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+        <svg
+            id="_15x15_photo_back"
+            data-name="15x15 photo back"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4561" data-name="Rectangle 4561" width="15" height="15" fill="none" />
+                    <rect
+                        id="Rectangle_4561"
+                        data-name="Rectangle 4561"
+                        width="15"
+                        height="15"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_222" data-name="Mask Group 222" clipPath="url(#clip-path)">
@@ -1863,13 +2751,31 @@ export const LineSvg = () => {
 };
 export const PlusSvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="#8e8e8e">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="#8e8e8e"
+        >
             <defs>
                 <clipPath id="clip-path2">
-                    <rect id="Rectangle_4527" data-name="Rectangle 4527" width="15" height="15" transform="translate(324 333)" fill="#8e8e8e" />
+                    <rect
+                        id="Rectangle_4527"
+                        data-name="Rectangle 4527"
+                        width="15"
+                        height="15"
+                        transform="translate(324 333)"
+                        fill="#8e8e8e"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_16" data-name="Mask Group 16" transform="translate(-324 -333)" clipPath="url(#clip-path2)">
+            <g
+                id="Mask_Group_16"
+                data-name="Mask Group 16"
+                transform="translate(-324 -333)"
+                clipPath="url(#clip-path2)"
+            >
                 <path
                     id="add-3"
                     d="M13.235,5.714H9.286V1.765a1.786,1.786,0,0,0-3.571,0v3.95H1.765a1.786,1.786,0,0,0,0,3.571h3.95v3.95a1.786,1.786,0,0,0,3.571,0V9.286h3.95a1.786,1.786,0,0,0,0-3.571Z"
@@ -1880,12 +2786,26 @@ export const PlusSvg = () => {
         </svg>
     );
 };
-export const SunSvg = ({ color = '#7c7c7c', w = '18', h = '18' }: { color?: string; w?: string; h?: string }) => {
+export const SunSvg = ({
+    color = '#7c7c7c',
+    w = '18',
+    h = '18',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 14 14">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_5742" data-name="Rectangle 5742" width="14" height="14" fill="none" />
+                    <rect
+                        id="Rectangle_5742"
+                        data-name="Rectangle 5742"
+                        width="14"
+                        height="14"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_558" data-name="Mask Group 558" clipPath="url(#clip-path)">
@@ -1918,7 +2838,15 @@ export const SunSvg = ({ color = '#7c7c7c', w = '18', h = '18' }: { color?: stri
                         transform="translate(2.172 0.594)"
                         fill={color}
                     />
-                    <circle id="Ellipse_524" data-name="Ellipse 524" cx="0.977" cy="0.977" r="0.977" transform="translate(5.86)" fill={color} />
+                    <circle
+                        id="Ellipse_524"
+                        data-name="Ellipse 524"
+                        cx="0.977"
+                        cy="0.977"
+                        r="0.977"
+                        transform="translate(5.86)"
+                        fill={color}
+                    />
                     <path
                         id="Path_22346"
                         data-name="Path 22346"
@@ -1947,7 +2875,15 @@ export const SunSvg = ({ color = '#7c7c7c', w = '18', h = '18' }: { color?: stri
                         transform="translate(0.594 2.172)"
                         fill={color}
                     />
-                    <circle id="Ellipse_525" data-name="Ellipse 525" cx="0.977" cy="0.977" r="0.977" transform="translate(5.86 11.719)" fill={color} />
+                    <circle
+                        id="Ellipse_525"
+                        data-name="Ellipse 525"
+                        cx="0.977"
+                        cy="0.977"
+                        r="0.977"
+                        transform="translate(5.86 11.719)"
+                        fill={color}
+                    />
                     <path
                         id="Path_22350"
                         data-name="Path 22350"
@@ -1955,10 +2891,34 @@ export const SunSvg = ({ color = '#7c7c7c', w = '18', h = '18' }: { color?: stri
                         transform="translate(1.414 2.525)"
                         fill={color}
                     />
-                    <path id="Path_22351" data-name="Path 22351" d="M5.536,5.592l.673-.429L5.536,4.9Z" transform="translate(1.545 1.312)" fill={color} />
-                    <path id="Path_22352" data-name="Path 22352" d="M5.349,4.734v-.8L4.713,4.98Z" transform="translate(1.243 0.958)" fill={color} />
-                    <path id="Path_22353" data-name="Path 22353" d="M5.536,3.939v.8l.636.246Z" transform="translate(1.545 0.958)" fill={color} />
-                    <path id="Path_22354" data-name="Path 22354" d="M5.359,5.592V4.9l-.673.26Z" transform="translate(1.233 1.312)" fill={color} />
+                    <path
+                        id="Path_22351"
+                        data-name="Path 22351"
+                        d="M5.536,5.592l.673-.429L5.536,4.9Z"
+                        transform="translate(1.545 1.312)"
+                        fill={color}
+                    />
+                    <path
+                        id="Path_22352"
+                        data-name="Path 22352"
+                        d="M5.349,4.734v-.8L4.713,4.98Z"
+                        transform="translate(1.243 0.958)"
+                        fill={color}
+                    />
+                    <path
+                        id="Path_22353"
+                        data-name="Path 22353"
+                        d="M5.536,3.939v.8l.636.246Z"
+                        transform="translate(1.545 0.958)"
+                        fill={color}
+                    />
+                    <path
+                        id="Path_22354"
+                        data-name="Path 22354"
+                        d="M5.359,5.592V4.9l-.673.26Z"
+                        transform="translate(1.233 1.312)"
+                        fill={color}
+                    />
                     <path
                         id="Path_22355"
                         data-name="Path 22355"
@@ -1980,7 +2940,15 @@ export const SunSvg = ({ color = '#7c7c7c', w = '18', h = '18' }: { color?: stri
                         transform="translate(1.307 1.84)"
                         fill={color}
                     />
-                    <circle id="Ellipse_526" data-name="Ellipse 526" cx="0.977" cy="0.977" r="0.977" transform="translate(11.719 5.86)" fill={color} />
+                    <circle
+                        id="Ellipse_526"
+                        data-name="Ellipse 526"
+                        cx="0.977"
+                        cy="0.977"
+                        r="0.977"
+                        transform="translate(11.719 5.86)"
+                        fill={color}
+                    />
                     <path
                         id="Path_22358"
                         data-name="Path 22358"
@@ -1995,23 +2963,50 @@ export const SunSvg = ({ color = '#7c7c7c', w = '18', h = '18' }: { color?: stri
                         transform="translate(2.525 1.414)"
                         fill={color}
                     />
-                    <circle id="Ellipse_527" data-name="Ellipse 527" cx="0.977" cy="0.977" r="0.977" transform="translate(0 5.86)" fill={color} />
+                    <circle
+                        id="Ellipse_527"
+                        data-name="Ellipse 527"
+                        cx="0.977"
+                        cy="0.977"
+                        r="0.977"
+                        transform="translate(0 5.86)"
+                        fill={color}
+                    />
                 </g>
             </g>
         </svg>
     );
 };
 
-export const TronSvg = ({ color = '#7c7c7c', w = '20', h = '20' }: { color?: string; w?: string; h?: string }) => {
+export const TronSvg = ({
+    color = '#7c7c7c',
+    w = '20',
+    h = '20',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 14 14">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4612" data-name="Rectangle 4612" width="14" height="14" fill="none" />
+                    <rect
+                        id="Rectangle_4612"
+                        data-name="Rectangle 4612"
+                        width="14"
+                        height="14"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12339" data-name="Group 12339" transform="translate(-220 -154)">
-                <g id="Mask_Group_547" data-name="Mask Group 547" transform="translate(220 154)" clipPath="url(#clip-path)">
+                <g
+                    id="Mask_Group_547"
+                    data-name="Mask Group 547"
+                    transform="translate(220 154)"
+                    clipPath="url(#clip-path)"
+                >
                     <g id="Group_12253" data-name="Group 12253" transform="translate(0.318 0)">
                         <path
                             id="Path_22232"
@@ -2027,13 +3022,26 @@ export const TronSvg = ({ color = '#7c7c7c', w = '20', h = '20' }: { color?: str
         </svg>
     );
 };
-export const UsdtTronSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: string; w?: string; h?: string }) => {
+export const UsdtTronSvg = ({
+    color = '#7c7c7c',
+    w = '10',
+    h = '10',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 10.193 8.638">
             <defs>
                 <clipPath id="clip-path" />
             </defs>
-            <g id="Mask_Group_549" data-name="Mask Group 549" transform="translate(0.009 -0.51)" clipPath="url(#clip-path)">
+            <g
+                id="Mask_Group_549"
+                data-name="Mask Group 549"
+                transform="translate(0.009 -0.51)"
+                clipPath="url(#clip-path)"
+            >
                 <g id="usdttrc20_87164a7b35" transform="translate(-0.009 0.51)">
                     <path
                         id="Path_22300"
@@ -2051,7 +3059,15 @@ export const UsdtTronSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?:
                         fill="#fff"
                         fillRule="evenodd"
                     />
-                    <circle id="Ellipse_512" data-name="Ellipse 512" cx="2.5" cy="2.5" r="2.5" transform="translate(5.009 3.49)" fill="#eb322a" />
+                    <circle
+                        id="Ellipse_512"
+                        data-name="Ellipse 512"
+                        cx="2.5"
+                        cy="2.5"
+                        r="2.5"
+                        transform="translate(5.009 3.49)"
+                        fill="#eb322a"
+                    />
                     <path
                         id="Path_22302"
                         data-name="Path 22302"
@@ -2065,11 +3081,27 @@ export const UsdtTronSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?:
         </svg>
     );
 };
-export const TrxSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: string; w?: string; h?: string }) => {
+export const TrxSvg = ({
+    color = '#7c7c7c',
+    w = '10',
+    h = '10',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 10 10">
             <g id="Group_12253" data-name="Group 12253" transform="translate(0 0)">
-                <circle id="Ellipse_497" data-name="Ellipse 497" cx="5" cy="5" r="5" transform="translate(0 0)" fill="#eb322a" />
+                <circle
+                    id="Ellipse_497"
+                    data-name="Ellipse 497"
+                    cx="5"
+                    cy="5"
+                    r="5"
+                    transform="translate(0 0)"
+                    fill="#eb322a"
+                />
                 <path
                     id="Path_22232"
                     data-name="Path 22232"
@@ -2082,16 +3114,35 @@ export const TrxSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: stri
         </svg>
     );
 };
-export const EthereumSvg = ({ color = '#7c7c7c', w = '20', h = '20' }: { color?: string; w?: string; h?: string }) => {
+export const EthereumSvg = ({
+    color = '#7c7c7c',
+    w = '20',
+    h = '20',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 14 14">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4612" data-name="Rectangle 4612" width="14" height="14" fill="none" />
+                    <rect
+                        id="Rectangle_4612"
+                        data-name="Rectangle 4612"
+                        width="14"
+                        height="14"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12340" data-name="Group 12340" transform="translate(-246 -241)">
-                <g id="Mask_Group_544" data-name="Mask Group 544" transform="translate(246 241)" clipPath="url(#clip-path)">
+                <g
+                    id="Mask_Group_544"
+                    data-name="Mask Group 544"
+                    transform="translate(246 241)"
+                    clipPath="url(#clip-path)"
+                >
                     <g id="Group_12253" data-name="Group 12253" transform="translate(2.747 0)">
                         <path
                             id="Path_22023"
@@ -2141,15 +3192,35 @@ export const EthereumSvg = ({ color = '#7c7c7c', w = '20', h = '20' }: { color?:
         </svg>
     );
 };
-export const UsdtEthSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: string; w?: string; h?: string }) => {
+export const UsdtEthSvg = ({
+    color = '#7c7c7c',
+    w = '10',
+    h = '10',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 10 10">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_5684" data-name="Rectangle 5684" width="10" height="10" transform="translate(0.334)" fill="none" />
+                    <rect
+                        id="Rectangle_5684"
+                        data-name="Rectangle 5684"
+                        width="10"
+                        height="10"
+                        transform="translate(0.334)"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
-            <g id="Mask_Group_534" data-name="Mask Group 534" transform="translate(-0.334)" clipPath="url(#clip-path)">
+            <g
+                id="Mask_Group_534"
+                data-name="Mask Group 534"
+                transform="translate(-0.334)"
+                clipPath="url(#clip-path)"
+            >
                 <g id="usdterc20_5ae21618aa" transform="translate(0.167 0.585)">
                     <path
                         id="Path_22256"
@@ -2167,23 +3238,80 @@ export const UsdtEthSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: 
                         fill="#fff"
                         fillRule="evenodd"
                     />
-                    <path id="Path_22258" data-name="Path 22258" d="M25.456,14.947l1.5,2.485-1.5-.64Z" transform="translate(-17.031 -10.989)" fill="#e68f7b" />
-                    <path id="Path_22259" data-name="Path 22259" d="M20.925,17.432l1.5-2.485.006,1.844Z" transform="translate(-14 -10.989)" fill="#f8ec7c" />
-                    <path id="Path_22260" data-name="Path 22260" d="M22.425,22.076l-1.5-.916,1.505-.64Z" transform="translate(-14 -14.718)" fill="#6eb87d" />
-                    <path id="Path_22261" data-name="Path 22261" d="M26.96,21.16l-1.5-.64-.006,1.556Z" transform="translate(-17.031 -14.718)" fill="#946ba7" />
-                    <path id="Path_22262" data-name="Path 22262" d="M25.456,24.374l1.5-.891-1.5,2.119Z" transform="translate(-17.031 -16.7)" fill="#697cb9" />
-                    <path id="Path_22263" data-name="Path 22263" d="M22.425,24.374l-1.5-.891,1.5,2.119Z" transform="translate(-14 -16.7)" fill="#4fadd0" />
+                    <path
+                        id="Path_22258"
+                        data-name="Path 22258"
+                        d="M25.456,14.947l1.5,2.485-1.5-.64Z"
+                        transform="translate(-17.031 -10.989)"
+                        fill="#e68f7b"
+                    />
+                    <path
+                        id="Path_22259"
+                        data-name="Path 22259"
+                        d="M20.925,17.432l1.5-2.485.006,1.844Z"
+                        transform="translate(-14 -10.989)"
+                        fill="#f8ec7c"
+                    />
+                    <path
+                        id="Path_22260"
+                        data-name="Path 22260"
+                        d="M22.425,22.076l-1.5-.916,1.505-.64Z"
+                        transform="translate(-14 -14.718)"
+                        fill="#6eb87d"
+                    />
+                    <path
+                        id="Path_22261"
+                        data-name="Path 22261"
+                        d="M26.96,21.16l-1.5-.64-.006,1.556Z"
+                        transform="translate(-17.031 -14.718)"
+                        fill="#946ba7"
+                    />
+                    <path
+                        id="Path_22262"
+                        data-name="Path 22262"
+                        d="M25.456,24.374l1.5-.891-1.5,2.119Z"
+                        transform="translate(-17.031 -16.7)"
+                        fill="#697cb9"
+                    />
+                    <path
+                        id="Path_22263"
+                        data-name="Path 22263"
+                        d="M22.425,24.374l-1.5-.891,1.5,2.119Z"
+                        transform="translate(-14 -16.7)"
+                        fill="#4fadd0"
+                    />
                 </g>
             </g>
         </svg>
     );
 };
-export const EthSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: string; w?: string; h?: string }) => {
+export const EthSvg = ({
+    color = '#7c7c7c',
+    w = '10',
+    h = '10',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
-        <svg id="_10x10_flag_photo" data-name="10x10 flag photo" xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 10 10">
+        <svg
+            id="_10x10_flag_photo"
+            data-name="10x10 flag photo"
+            xmlns="http://www.w3.org/2000/svg"
+            width={w}
+            height={h}
+            viewBox="0 0 10 10"
+        >
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="10" height="10" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="10"
+                        height="10"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Mask_Group_488" data-name="Mask Group 488" clipPath="url(#clip-path)">
@@ -2207,16 +3335,35 @@ export const EthSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: stri
         </svg>
     );
 };
-export const BinanceSvg = ({ color = '#7c7c7c', w = '20', h = '20' }: { color?: string; w?: string; h?: string }) => {
+export const BinanceSvg = ({
+    color = '#7c7c7c',
+    w = '20',
+    h = '20',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 14 14">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4612" data-name="Rectangle 4612" width="14" height="14" fill="none" />
+                    <rect
+                        id="Rectangle_4612"
+                        data-name="Rectangle 4612"
+                        width="14"
+                        height="14"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12341" data-name="Group 12341" transform="translate(-198 -347)">
-                <g id="Mask_Group_546" data-name="Mask Group 546" transform="translate(198 347)" clipPath="url(#clip-path)">
+                <g
+                    id="Mask_Group_546"
+                    data-name="Mask Group 546"
+                    transform="translate(198 347)"
+                    clipPath="url(#clip-path)"
+                >
                     <g id="binance-logo" transform="translate(0 0.001)">
                         <path
                             id="Path_22292"
@@ -2259,18 +3406,40 @@ export const BinanceSvg = ({ color = '#7c7c7c', w = '20', h = '20' }: { color?: 
         </svg>
     );
 };
-export const BTCSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: string; w?: string; h?: string }): JSX.Element => {
+export const BTCSvg = ({
+    color = '#7c7c7c',
+    w = '10',
+    h = '10',
+}: {
+    color?: string;
+    w?: string;
+    h?: string;
+}): JSX.Element => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={w} height={h} viewBox="0 0 10 10">
             <defs>
                 <clipPath id="clip-path">
-                    <rect id="Rectangle_4644" data-name="Rectangle 4644" width="10" height="10" fill="none" />
+                    <rect
+                        id="Rectangle_4644"
+                        data-name="Rectangle 4644"
+                        width="10"
+                        height="10"
+                        fill="none"
+                    />
                 </clipPath>
             </defs>
             <g id="Group_12325" data-name="Group 12325" transform="translate(-334 -454)">
-                <g id="_10x10_flag_photo" data-name="10x10 flag photo" transform="translate(334 454)">
+                <g
+                    id="_10x10_flag_photo"
+                    data-name="10x10 flag photo"
+                    transform="translate(334 454)"
+                >
                     <g id="Mask_Group_487" data-name="Mask Group 487" clipPath="url(#clip-path)">
-                        <g id="Bitcoin_Logo" data-name="Bitcoin Logo" transform="translate(1.305 0)">
+                        <g
+                            id="Bitcoin_Logo"
+                            data-name="Bitcoin Logo"
+                            transform="translate(1.305 0)"
+                        >
                             <path
                                 id="Path_22107"
                                 data-name="Path 22107"
@@ -2288,7 +3457,14 @@ export const BTCSvg = ({ color = '#7c7c7c', w = '10', h = '10' }: { color?: stri
 export const DotSvg = ({ color }: { color: string }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 5 5">
-            <circle id="Ellipse_528" data-name="Ellipse 528" cx="2.5" cy="2.5" r="2.5" fill={color} />
+            <circle
+                id="Ellipse_528"
+                data-name="Ellipse 528"
+                cx="2.5"
+                cy="2.5"
+                r="2.5"
+                fill={color}
+            />
         </svg>
     );
 };
@@ -2296,7 +3472,14 @@ export const CloseModalIcon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <g id="Group_10760" data-name="Group 10760" transform="translate(-1038 -56)">
-                <g id="Rectangle_4545" data-name="Rectangle 4545" transform="translate(1038 56)" fill="none" stroke="#cecdcd" strokeWidth="0.5">
+                <g
+                    id="Rectangle_4545"
+                    data-name="Rectangle 4545"
+                    transform="translate(1038 56)"
+                    fill="none"
+                    stroke="#cecdcd"
+                    strokeWidth="0.5"
+                >
                     <rect width="20" height="20" rx="5" stroke="none" />
                     <rect x="0.25" y="0.25" width="19.5" height="19.5" rx="4.75" fill="none" />
                 </g>
@@ -2328,15 +3511,27 @@ export const CloseSvg = ({ color }: { color?: string }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
             <g id="Group_12395" data-name="Group 12395" transform="translate(-1295.807 -336.807)">
-                <g id="Path_22360" data-name="Path 22360" transform="translate(1295.807 336.807)" fill="none">
-                    <path d="M5,0H25a5,5,0,0,1,5,5V25a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V5A5,5,0,0,1,5,0Z" stroke="none" />
+                <g
+                    id="Path_22360"
+                    data-name="Path 22360"
+                    transform="translate(1295.807 336.807)"
+                    fill="none"
+                >
+                    <path
+                        d="M5,0H25a5,5,0,0,1,5,5V25a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V5A5,5,0,0,1,5,0Z"
+                        stroke="none"
+                    />
                     <path
                         d="M 5 1 C 2.794389724731445 1 1 2.794389724731445 1 5 L 1 25 C 1 27.20561027526855 2.794389724731445 29 5 29 L 25 29 C 27.20561027526855 29 29 27.20561027526855 29 25 L 29 5 C 29 2.794389724731445 27.20561027526855 1 25 1 L 5 1 M 5 0 L 25 0 C 27.76141929626465 0 30 2.238580703735352 30 5 L 30 25 C 30 27.76141929626465 27.76141929626465 30 25 30 L 5 30 C 2.238580703735352 30 0 27.76141929626465 0 25 L 0 5 C 0 2.238580703735352 2.238580703735352 0 5 0 Z"
                         stroke="none"
                         fill="#cecdcd"
                     />
                 </g>
-                <g id="Group_12394" data-name="Group 12394" transform="translate(1310.903 339.257) rotate(45)">
+                <g
+                    id="Group_12394"
+                    data-name="Group 12394"
+                    transform="translate(1310.903 339.257) rotate(45)"
+                >
                     <line
                         id="Line_962"
                         data-name="Line 962"
@@ -2437,7 +3632,15 @@ export const EditIcon = () => {
                             transform="translate(7.595 12.882) rotate(-45)"
                             fill="#404040"
                         ></path>
-                        <circle id="Ellipse_318" data-name="Ellipse 318" cx="2.694" cy="2.694" r="2.694" transform="translate(2.963)" fill="#404040"></circle>
+                        <circle
+                            id="Ellipse_318"
+                            data-name="Ellipse 318"
+                            cx="2.694"
+                            cy="2.694"
+                            r="2.694"
+                            transform="translate(2.963)"
+                            fill="#404040"
+                        ></circle>
                         <path
                             id="Path_16024"
                             data-name="Path 16024"
@@ -2446,7 +3649,14 @@ export const EditIcon = () => {
                             fill="#404040"
                         ></path>
                     </g>
-                    <rect id="Rectangle_4536" data-name="Rectangle 4536" width="14.875" height="14.875" transform="translate(0 0.125)" fill="none"></rect>
+                    <rect
+                        id="Rectangle_4536"
+                        data-name="Rectangle 4536"
+                        width="14.875"
+                        height="14.875"
+                        transform="translate(0 0.125)"
+                        fill="none"
+                    ></rect>
                 </g>
             </g>
         </svg>
@@ -2470,7 +3680,14 @@ export const LineIconSvg = () => {
 };
 export const ArrowDownSvg = () => {
     return (
-        <svg id="Group_12660" data-name="Group 12660" xmlns="http://www.w3.org/2000/svg" width="18.996" height="18.996" viewBox="0 0 18.996 18.996">
+        <svg
+            id="Group_12660"
+            data-name="Group 12660"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18.996"
+            height="18.996"
+            viewBox="0 0 18.996 18.996"
+        >
             <g id="Path_22466" data-name="Path 22466" fill="#e8e8e8">
                 <path
                     d="M 9.498046875 18.84609603881836 C 4.343516826629639 18.84609603881836 0.1499968767166138 14.6525764465332 0.1499968767166138 9.498046875 C 0.1499968767166138 4.343516826629639 4.343516826629639 0.1499968767166138 9.498046875 0.1499968767166138 C 14.6525764465332 0.1499968767166138 18.84609603881836 4.343516826629639 18.84609603881836 9.498046875 C 18.84609603881836 14.6525764465332 14.6525764465332 18.84609603881836 9.498046875 18.84609603881836 Z"

@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { notify } from './notify';
+import LocalStorage from '@/utils/localStorage';
 
 const api: AxiosInstance = axios.create({
 
@@ -7,6 +8,8 @@ const api: AxiosInstance = axios.create({
     headers: { 'Content-Type': 'application/json' }
 });
 
+const savedUser = LocalStorage.getItem('user');
+const token = JSON.parse(savedUser || '{}')?.accessToken?.token || ''
 const request = async (
     method: 'get' | 'post' | 'put' | 'delete',
     url: string,
@@ -18,7 +21,7 @@ const request = async (
     try {
         const config: AxiosRequestConfig = {
             url,
-            method
+            method,
         };
 
         if (method === 'get' || method === 'delete') {
@@ -27,10 +30,9 @@ const request = async (
             config.data = data;
         }
 
-        if (headers) {
-            config.headers = { ...api.defaults.headers.common, ...headers };
-        }
-
+        // if (headers) {
+            config.headers = { ...api.defaults.headers.common, ...headers, Authorization: `Bearer ${token}` };
+        // }
         const response: AxiosResponse = await api.request(config);
         return callback(response?.data);
     } catch (error: any) {
