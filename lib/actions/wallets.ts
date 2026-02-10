@@ -151,10 +151,12 @@ export const getExchangeRates = async (): Promise<{
         const keysStored = localStorage.getItem('KEYS');
         const apiKeyTron = keysStored ? JSON.parse(keysStored)?.tronscan : apiKeyTronEnv;
         try {
+            const headers: Record<string, string> = {};
+            if (coinKey) {
+                headers['x-cg-api-key'] = coinKey;
+            }
             const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,tron,tether&vs_currencies=usd', {
-                headers: {
-                    'x-cg-api-key': coinKey
-                }
+                headers
             });
 
             const data = await response.json();
