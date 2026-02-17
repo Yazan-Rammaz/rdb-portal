@@ -1,22 +1,19 @@
 'use client';
 
-import LoginForm from '@/components/auth/LoginForm';
-import { GuestGuard } from '@/components/auth/GuestGuard';
-import { useAuth } from '@/context/AuthContext';
+import { LoginForm, GuestGuard, useAuth } from '@/features/auth';
 
 export default function LoginPage() {
-  const { user } = useAuth();
+    const { user } = useAuth();
 
-  const handlePasswordReset = () => {
-    // This will be implemented when we migrate the reset password page
-    console.log('Navigating to password reset...');
-  };
+    const handlePasswordReset = () => {
+        console.log('Navigating to password reset...');
+    };
 
-  return (
-    <GuestGuard>
-      <div className="min-h-screen bg-white flex items-center justify-center p-4">
-        <LoginForm user={user} onChangePassword={handlePasswordReset} />
-      </div>
-    </GuestGuard>
-  );
+    return (
+        <GuestGuard>
+            <div className="min-h-screen bg-white flex items-center justify-center p-4">
+                <LoginForm user={user || undefined} onChangePassword={handlePasswordReset} />
+            </div>
+        </GuestGuard>
+    );
 }

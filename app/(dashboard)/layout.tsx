@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import { AuthGuard } from '@/components/auth/AuthGuard';
-import Sidebar from '@/components/layout/SideBar';
-import Header from '@/components/layout/Header';
-import { useLayout } from '@/context/LayoutContext';
+import { AuthGuard } from '@/features/auth';
+import { Sidebar, Header } from '@/shared/components/layout';
+import { useLayout } from '@/shared/context';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     const { isMobile } = useLayout();
@@ -21,7 +20,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
                     {/* Main Content */}
                     <main
-                        className={`text-[#5D5D5D] flex-1 ${isMobile ? 'w-full px-[30px]' : 'w-[calc(100%-240px)] pr-[30px]'} pb-[20px]`}
+                        className={`text-[#5D5D5D] flex-1 ${isMobile ? 'w-full px-7.5' : 'w-[calc(100%-240px)] pr-7.5'} pb-5`}
                     >
                         <div className="bg-[#F7F7F7] rounded-[10px] h-full w-full p-6 shadow-sm overflow-auto">
                             {children}
