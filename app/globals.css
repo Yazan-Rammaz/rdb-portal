@@ -1,56 +1,112 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @config "../tailwind.config.ts";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Animations */
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
 }
 
 .animate-shake {
-  animation: shake 0.2s ease-in-out 0s 2;
+    animation: shake 0.2s ease-in-out 0s 2;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.4s ease-out forwards;
+    animation: fadeIn 0.4s ease-out forwards;
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 .animate-blink {
-  animation: blink 1s ease-in-out infinite;
+    animation: blink 1s ease-in-out infinite;
 }
 
+/* Table skeleton shimmer */
+@keyframes shimmer {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 800px 0;
+    }
+}
 
+.animate-shimmer {
+    background: linear-gradient(90deg, #edf0f4 0%, #e2e6ec 50%, #edf0f4 100%);
+    background-size: 800px 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Table refresh progress bar */
+@keyframes tableProgress {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+.animate-table-progress {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #396cf7;
+    animation: tableProgress 1.6s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}

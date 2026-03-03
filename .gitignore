@@ -16,9 +16,17 @@
 # next.js
 /.next/
 /out/
-
+/.history/
+/.claude/
+/.github/
+/.specify/
+/.vscode/
+/specify/
+/specs/
+CLAUDE.md
 # production
 /build
+/docs
 
 # misc
 .DS_Store
