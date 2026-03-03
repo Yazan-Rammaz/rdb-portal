@@ -1,3 +1,5 @@
+import type { PaginatedResponse, PaginationParams } from '@/shared/types';
+
 // User Types
 export interface RatingStats {
     averageSellerRating: number;
@@ -24,7 +26,15 @@ export interface GuestToken {
     isActive: boolean;
 }
 
-export interface User {
+export interface UserAddress {
+    street?: string;
+    city?: string;
+    country?: string;
+    postalCode?: string;
+    [key: string]: string | undefined;
+}
+
+export interface AppUser {
     _id: string;
     firstName: string;
     lastName: string;
@@ -45,22 +55,14 @@ export interface User {
     createdAt: string;
     updatedAt: string;
     __v: number;
-    address: any | null;
+    address: UserAddress | null;
 }
 
-export interface UsersResponse {
-    items: User[];
-    total: number;
-    page: number;
-    limit: number;
-    totalPages: number;
-    hasNext: boolean;
-    hasPrevious: boolean;
-}
+export type UsersResponse = PaginatedResponse<AppUser>;
 
-export interface UsersParams {
-    page?: number;
-    limit?: number;
+export interface UsersParams extends PaginationParams {
     search?: string;
     status?: string;
 }
+
+export type User = AppUser;

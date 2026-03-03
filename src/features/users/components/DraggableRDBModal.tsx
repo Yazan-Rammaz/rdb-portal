@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 
 interface DraggableRDBModalProps {
     isOpen: boolean;
@@ -23,15 +23,14 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
     const startYRef = useRef(0);
     const startHeightRef = useRef(0);
 
-    // Handle mount animation
-    useEffect(() => {
+    // Initialize mounted state when modal opens
+    useLayoutEffect(() => {
         if (isOpen) {
             setIsMounted(true);
         }
     }, [isOpen]);
 
     useEffect(() => {
-        // Select both elements
         const html = document.documentElement;
         const body = document.body;
 
@@ -43,7 +42,6 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
             body.style.overflow = 'unset';
         }
 
-        // Clean up function to ensure scrolling is restored if component unmounts
         return () => {
             html.style.overflow = 'unset';
             body.style.overflow = 'unset';
@@ -60,7 +58,6 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
             const delta = clientY - startYRef.current;
             const newHeight = startHeightRef.current - delta;
 
-            // Minimum height: 300px
             if (newHeight >= 300) {
                 setHeight(newHeight);
             }
@@ -74,12 +71,10 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
             const delta = clientY - startYRef.current;
             const newHeight = startHeightRef.current - delta;
 
-            // Close if dragged down too much (below bottom of screen)
             if (newHeight < 600) {
                 setIsMounted(false);
                 setTimeout(onClose, 300);
             } else if (newHeight > window.innerHeight - 100) {
-                // Close if dragged to full screen
                 setHeight(window.innerHeight - 100);
             }
 
@@ -135,14 +130,12 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
                 }
             `}</style>
 
-            {/* Backdrop */}
             <div
                 className={`fixed inset-0 bg-opacity-50 backdrop-blur-xs z-40 ${
                     isMounted ? 'backdrop-fade-in bg-black/30' : 'backdrop-fade-out'
                 }`}
             />
 
-            {/* Modal Container */}
             <div
                 ref={containerRef}
                 className={`fixed bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl z-50 ${
@@ -155,7 +148,6 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
                     willChange: isDragging ? 'height' : 'auto',
                 }}
             >
-                {/* Drag Handle */}
                 <div className="flex w-full justify-between px-5 items-center shadow-2xs rounded-2xl py-2 ">
                     <div />
                     <div
@@ -188,7 +180,6 @@ const DraggableRDBModal: React.FC<DraggableRDBModalProps> = ({
                     </button>
                 </div>
 
-                {/* Content */}
                 <div className="overflow-y-auto px-6 pb-0" style={{ height: `${height - 50}px` }}>
                     {children}
                 </div>

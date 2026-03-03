@@ -1,27 +1,46 @@
+'use client';
+
 import React from 'react';
 
-type LoadingTableProps = {
-    loading?: boolean;
-    hasData?: boolean;
-};
+interface LoadingTableProps {
+    columnCount: number;
+    rowCount?: number;
+}
 
-const LoadingTable: React.FC<LoadingTableProps> = ({ loading = true, hasData = false }) => {
-    if (!loading) return null;
+// Varied shimmer widths so rows feel organic, not stamped
+const CELL_WIDTHS = [
+    ['w-32', 'w-40', 'w-28', 'w-16', 'w-20', 'w-24', 'w-12'],
+    ['w-28', 'w-32', 'w-36', 'w-20', 'w-16', 'w-28', 'w-12'],
+    ['w-36', 'w-24', 'w-28', 'w-16', 'w-20', 'w-20', 'w-12'],
+    ['w-24', 'w-36', 'w-32', 'w-20', 'w-16', 'w-32', 'w-12'],
+    ['w-40', 'w-28', 'w-24', 'w-20', 'w-20', 'w-24', 'w-12'],
+];
 
-    // Full placeholder when there's no data yet
-    if (!hasData) {
-        return (
-            <div className="flex justify-center items-center p-8">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-            </div>
-        );
-    }
-
-    // Small centered overlay spinner when refreshing existing data
+const LoadingTable: React.FC<LoadingTableProps> = ({ columnCount, rowCount = 9 }) => {
     return (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500"></div>
-        </div>
+        <>
+            {Array.from({ length: rowCount }).map((_, rowIdx) => (
+                <tr key={rowIdx} className="border-b border-slate-100 last:border-b-0">
+                    {Array.from({ length: columnCount }).map((_, colIdx) => {
+                        const widths = CELL_WIDTHS[rowIdx % CELL_WIDTHS.length];
+                        const width = widths[colIdx % widths.length];
+                        const delay = (rowIdx * 60 + colIdx * 40) % 600;
+
+                        return (
+                            <td
+                                key={colIdx}
+                                className={`px-6 py-4.5 ${colIdx === 0 ? 'pl-8' : ''}`}
+                            >
+                                <div
+                                    className={`h-3 rounded-full animate-shimmer ${width}`}
+                                    style={{ animationDelay: `${delay}ms` }}
+                                />
+                            </td>
+                        );
+                    })}
+                </tr>
+            ))}
+        </>
     );
 };
 

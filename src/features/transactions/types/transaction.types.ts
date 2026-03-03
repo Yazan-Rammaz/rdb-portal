@@ -1,3 +1,5 @@
+import type { PaginatedResponse, PaginationParams } from '@/shared/types';
+
 // Transaction Types
 export interface Transaction {
     id: string;
@@ -10,23 +12,20 @@ export interface Transaction {
     createdAt: string;
     updatedAt: string;
     description?: string;
-    metadata?: Record<string, any>;
+    metadata?: TransactionMetadata;
 }
 
-export interface TransactionsResponse {
-    items: Transaction[];
-    total: number;
-    page: number;
-    limit: number;
-    totalPages: number;
-    hasNext: boolean;
-    hasPrevious: boolean;
+export interface TransactionMetadata {
+    reference?: string;
+    externalId?: string;
+    notes?: string;
+    [key: string]: string | number | boolean | undefined;
 }
 
-export interface TransactionsParams {
-    page?: number;
-    limit?: number;
-    type?: string;
-    status?: string;
+export type TransactionsResponse = PaginatedResponse<Transaction>;
+
+export interface TransactionsParams extends PaginationParams {
+    type?: Transaction['type'];
+    status?: Transaction['status'];
     userId?: string;
 }

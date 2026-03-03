@@ -1,39 +1,30 @@
-import API from '@/shared/lib/api-client';
+'use server';
+
+import { getServerApi } from '@/shared/lib/api-server';
+import { API_ENDPOINTS } from '@/shared/constants';
 import { UsersResponse, UsersParams } from '../types';
 
-/**
- * Get users list with pagination
- */
-export const getUsers = (params: UsersParams = {}): Promise<UsersResponse> => {
-    return new Promise((resolve, reject) => {
-        const { page = 0, limit = 10 } = params;
-        API.get(
-            `https://trydos_wallet_develop.ramaaz.dev/users/admin?page=${page}&limit=${limit}`,
-            {},
-            (response) => {
-                resolve(response as UsersResponse);
-            },
-            (error) => {
-                reject(error);
-            },
-        );
-    });
+export const getUsers = async (params: UsersParams = {}): Promise<UsersResponse> => {
+    const api = await getServerApi();
+    return api.get<UsersResponse>(API_ENDPOINTS.USERS.LIST, params);
 };
 
-/**
- * Get single user by ID
- */
-export const getUserById = (userId: string): Promise<any> => {
-    return new Promise((resolve, reject) => {
-        API.get(
-            `https://trydos_wallet_develop.ramaaz.dev/users/admin/${userId}`,
-            {},
-            (response) => {
-                resolve(response);
-            },
-            (error) => {
-                reject(error);
-            },
-        );
-    });
+export const getUserById = async (userId: string): Promise<UsersResponse['items'][number]> => {
+    const api = await getServerApi();
+    return api.get<UsersResponse['items'][number]>(API_ENDPOINTS.USERS.GET(userId));
+};
+
+export const blockUser = async (userId: string): Promise<void> => {
+    const api = await getServerApi();
+    await api.put(API_ENDPOINTS.USERS.UPDATE(userId), { isBlocked: true });
+};
+
+export const unblockUser = async (userId: string): Promise<void> => {
+    const api = await getServerApi();
+    await api.put(API_ENDPOINTS.USERS.UPDATE(userId), { isBlocked: false });
+};
+
+export const deleteUser = async (userId: string): Promise<void> => {
+    const api = await getServerApi();
+    await api.delete(API_ENDPOINTS.USERS.DELETE(userId));
 };

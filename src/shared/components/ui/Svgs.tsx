@@ -1136,12 +1136,15 @@ export const LoaderSvg = ({ width = '235', duration, loading = false }: LoaderSv
     useEffect(() => {
         if (loading) {
             const step = 235 / (duration / 20);
+            const resetTimer = setTimeout(() => setCurrentWidth(0), 0);
             const interval = startInterval(step, () => {
                 setLoad(true);
             });
 
-            setCurrentWidth(0);
-            return () => clearInterval(interval);
+            return () => {
+                clearTimeout(resetTimer);
+                clearInterval(interval);
+            };
         }
     }, [duration, loading]);
 
@@ -1285,10 +1288,8 @@ export const LogoIconSvg = () => {
 export const LogoHeaderSvg = () => {
     return (
         <div className="flex items-center gap-1.5 select-none">
-            <span className="text-[16px] font-bold tracking-tight text-[#404040]">Trydos</span>
-            <span className="text-[14px] font-medium text-[#404040] opacity-80 pt-0.5">
-                Wallet Portal
-            </span>
+            <span className="text-[16px] font-bold tracking-tight text-[#404040]">RDB</span>
+            <span className="text-[14px] font-medium text-[#404040] opacity-80 pt-0.5">Portal</span>
         </div>
     );
 };

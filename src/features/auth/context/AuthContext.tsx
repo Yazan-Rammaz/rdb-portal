@@ -1,40 +1,61 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import type { User } from '../types';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
+import type { AdminInfo, LoginCredentials } from '../types';
+import { getSessionAction, loginAction, logoutAction } from '../actions';
+import { notify } from '@/shared/utils/notify';
 
 interface AuthContextType {
-    isUnlocked: boolean;
-    unlock: () => void;
-    lock: () => void;
-    user: User | null;
-    setUser: (user: User | null) => void;
+    user: AdminInfo | null;
+    isLoading: boolean;
+    login: (credentials: LoginCredentials) => Promise<void>;
+    logout: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [isUnlocked, setIsUnlocked] = useState(true);
-    const [user, setUser] = useState<User | null>(null);
+    const [user, setUser] = useState<AdminInfo | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const router = useRouter();
 
-    useEffect(() => {
-        const savedUser = localStorage.getItem('user');
-        if (savedUser) {
-            try {
-                const parsedUser = JSON.parse(savedUser);
-                setUser(parsedUser);
-                console.log('User loaded from localStorage:', parsedUser);
-            } catch (error) {
-                console.error('Error parsing saved user:', error);
-            }
+    const initSession = useCallback(async () => {
+        try {
+            setIsLoading(true);
+            const adminInfo = await getSessionAction();
+            setUser(adminInfo);
+        } catch {
+            setUser(null);
+        } finally {
+            setIsLoading(false);
         }
     }, []);
 
-    const unlock = () => setIsUnlocked(true);
-    const lock = () => setIsUnlocked(false);
+    useEffect(() => {
+        initSession();
+    }, [initSession]);
+
+    const login = useCallback(async (credentials: LoginCredentials) => {
+        const result = await loginAction(credentials);
+        if (result.success) {
+            setUser(result.user);
+            notify({ message: `Welcome back, ${result.user.fullName}!`, type: 'success' });
+            router.push('/');
+        } else {
+            notify({ message: result.error, type: 'error' });
+            throw new Error(result.error);
+        }
+    }, [router]);
+
+    const logout = useCallback(async () => {
+        await logoutAction();
+        setUser(null);
+        router.push('/auth');
+    }, [router]);
 
     return (
-        <AuthContext.Provider value={{ isUnlocked, unlock, lock, user, setUser }}>
+        <AuthContext.Provider value={{ user, isLoading, login, logout }}>
             {children}
         </AuthContext.Provider>
     );

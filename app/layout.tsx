@@ -1,10 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'react-datepicker/dist/react-datepicker.css';
 
 import { ClientProviders } from '@/src/shared/providers';
 import React from 'react';
@@ -20,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Ramaaz Digital banking',
+    title: 'RDB Portal',
     description:
-        'Manage your wallet transactions and business partners with Ramaaz Digital Banking.',
+        'Manage your wallet transactions and business partners with Ramaaz Digital Banking Portal.',
 };
 
 export default function RootLayout({

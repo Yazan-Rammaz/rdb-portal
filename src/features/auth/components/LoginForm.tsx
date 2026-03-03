@@ -1,196 +1,113 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { useRouter, useSearchParams } from 'next/navigation';
-import PinInputs from '@/shared/components/ui/PinInputs';
-import LoadingOverlay from '@/shared/components/ui/LoadingOverlay';
-import LoginOptions from './LoginOptions';
-import API from '@/shared/lib/api-client';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '../hooks';
-import LocalStorage from '@/shared/utils/localStorage';
-import { User } from '../types';
+import { getDefaultCredentials } from '../services';
+import { LogoHeaderSvg, RamaazPoweredSvg } from '@/shared/components/ui/Svgs';
 
-interface LoginFormProps {
-    user?: User;
-    onChangePassword?: () => void;
-}
-
-const LoginForm: React.FC<LoginFormProps> = ({ user, onChangePassword }) => {
+export function LoginForm() {
+    const { user, isLoading, login } = useAuth();
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const { unlock, lock, setUser: setAuthUser } = useAuth();
-    const [step, setStep] = useState<'username' | 'pin'>(user?.accessToken ? 'pin' : 'username');
-    const [loading, setLoading] = useState(false);
-    const [notValidPin, setNotValidPin] = useState(false);
-    const [isValidPin, setIsValidPin] = useState(false);
-    const [username, setUsername] = useState(user?.username || '');
-    const [pinValue, setPinValue] = useState('');
-    const [userData, setUserData] = useState<User | undefined>(user);
+    const defaults = getDefaultCredentials();
 
     useEffect(() => {
-        if (user?.username) {
-            setUsername(user.username);
-            setUserData(user);
-            setStep('pin');
+        if (!isLoading && user !== null) {
+            router.replace('/');
         }
-    }, [user]);
+    }, [isLoading, user, router]);
 
-    const handleUsernameSubmit = async (e?: React.FormEvent) => {
-        if (e) e.preventDefault();
-        if (!username) return;
+    const [email, setEmail] = useState(defaults.email);
+    const [password, setPassword] = useState(defaults.password);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-        setLoading(true);
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError(null);
+        setIsSubmitting(true);
         try {
-            setStep('pin');
-        } catch (error) {
-            console.error('User not found', error);
+            await login({ email, password });
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Login failed');
         } finally {
-            setLoading(false);
+            setIsSubmitting(false);
         }
     };
 
-    const handleLogout = () => {
-        LocalStorage.clear();
-        setAuthUser(null);
-        lock();
-        setUserData(undefined);
-        setUsername('');
-        setPinValue('');
-        setStep('username');
-    };
-
-    const handleError = () => {
-        setNotValidPin(true);
-        setPinValue('');
-        setTimeout(() => {
-            setNotValidPin(false);
-        }, 1500);
-    };
-
-    const handleLoginComplete = async (value: string) => {
-        setLoading(true);
-        await API.post(
-            '/api/v1/users/login',
-            { username: 'Admin', password: '123456' },
-            (data) => {
-                if (data?.data) {
-                    setIsValidPin(true);
-                    const userRes = data.data;
-                    if (userRes.access_token) {
-                        setTimeout(() => {
-                            const userFormatted = {
-                                ...userRes,
-                                username: userRes.user?.username,
-                                id: userRes.user?.id,
-                                avatar: userRes.user?.avatar,
-                            };
-                            LocalStorage.setItem('user', JSON.stringify(userFormatted));
-                            setAuthUser(userFormatted);
-                            unlock();
-
-                            const redirectUrl = searchParams.get('redirect');
-                            router.push(redirectUrl ? decodeURIComponent(redirectUrl) : '/');
-                        }, 1000);
-                    }
-                    setLoading(false);
-                }
-            },
-            (e) => {
-                setLoading(false);
-                handleError();
-            },
-        );
-    };
+    if (isLoading || user !== null) {
+        return null;
+    }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-100 w-full max-w-112.5">
-            <LoadingOverlay loading={loading} />
-
-            <div className="w-full transition-all duration-500 ease-in-out">
-                {step === 'username' ? (
-                    <form
-                        onSubmit={handleUsernameSubmit}
-                        className="flex flex-col items-center w-full px-4"
-                    >
-                        <div className="relative w-full group">
-                            <div
-                                className="absolute top-5 left-5 w-5 h-5 z-50 transition-colors"
-                                style={{
-                                    maskImage: 'url(/assets/icons/auth/svg/user.svg)',
-                                    maskRepeat: 'no-repeat',
-                                    maskPosition: 'center',
-                                    maskSize: username ? 'cover' : 'contain',
-                                    WebkitMaskImage: 'url(/assets/icons/auth/svg/user.svg)',
-                                    WebkitMaskRepeat: 'no-repeat',
-                                    WebkitMaskPosition: 'center',
-                                    WebkitMaskSize: username ? 'cover' : 'contain',
-                                    backgroundColor: username ? '#8E8E8E' : '#DDDDDD',
-                                }}
-                            />
-                            <input
-                                type="text"
-                                placeholder="User Name"
-                                onChange={(e) => setUsername(e.target.value)}
-                                className="w-full h-15 pl-14 pr-14 bg-white border border-[#e5e7eb] rounded-[20px] text-center text-lg text-[#8e8e8e] focus:outline-none transition-all placeholder:text-[#d1d5db]"
-                                autoFocus
-                            />
-                            {username && (
-                                <button
-                                    type="submit"
-                                    className="absolute top-5 right-5 w-5 h-5 z-50 cursor-pointer flex items-center justify-center bg-transparent border-none p-0 outline-none"
-                                >
-                                    <div
-                                        className="w-5 h-5 bg-[#4357EA]"
-                                        style={{
-                                            maskImage: 'url(/assets/icons/auth/svg/enterUser.svg)',
-                                            maskRepeat: 'no-repeat',
-                                            maskPosition: 'center',
-                                            WebkitMaskImage:
-                                                'url(/assets/icons/auth/svg/enterUser.svg)',
-                                            WebkitMaskRepeat: 'no-repeat',
-                                            WebkitMaskPosition: 'center',
-                                        }}
-                                    />
-                                </button>
-                            )}
-                        </div>
-                    </form>
-                ) : (
-                    <div className="flex flex-col items-center w-full gap-6 animate-fadeIn">
-                        <div className="flex flex-col items-center gap-3">
-                            <div className="relative w-30 h-30 overflow-hidden rounded-[30px] shadow-md border-4 border-white">
-                                <Image
-                                    src={'/img/user.png'}
-                                    alt={'User'}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <span className="text-[#404040] text-xl font-medium tracking-wide">
-                                {userData?.username}
-                            </span>
-                        </div>
-
-                        <div
-                            className={`transition-all duration-300 ${notValidPin ? 'animate-shake' : ''}`}
-                        >
-                            <PinInputs
-                                value={pinValue}
-                                onChange={setPinValue}
-                                onComplete={handleLoginComplete}
-                                disabled={loading}
-                                notValidPin={notValidPin}
-                                isValidPin={isValidPin}
-                            />
-                        </div>
-
-                        <LoginOptions onLogout={handleLogout} onChangePassword={() => {}} />
+        <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4">
+            <div className="w-full max-w-sm">
+                {/* Card */}
+                <div className="bg-[#F7F7F7] rounded-[10px] shadow-sm p-8">
+                    {/* Logo */}
+                    <div className="flex justify-center mb-8">
+                        <LogoHeaderSvg />
                     </div>
-                )}
+
+                    {/* Title */}
+                    <h1 className="text-[#404040] text-sm font-semibold text-center mb-6">
+                        Admin Portal
+                    </h1>
+
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        {/* Email */}
+                        <div className="space-y-1.5">
+                            <label className="block text-[11px] font-medium text-[#5D5D5D]">
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                autoComplete="email"
+                                className="w-full h-11 bg-white rounded-[10px] px-3.5 text-[12px] text-[#404040] border border-transparent shadow-sm outline-none focus:border-[#396CF7] transition-colors"
+                                placeholder="admin@ramaaz.com"
+                            />
+                        </div>
+
+                        {/* Password */}
+                        <div className="space-y-1.5">
+                            <label className="block text-[11px] font-medium text-[#5D5D5D]">
+                                Password
+                            </label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                autoComplete="current-password"
+                                className="w-full h-11 bg-white rounded-[10px] px-3.5 text-[12px] text-[#404040] border border-transparent shadow-sm outline-none focus:border-[#396CF7] transition-colors"
+                                placeholder="••••••••"
+                            />
+                        </div>
+
+                        {/* Error */}
+                        {error && (
+                            <p className="text-[11px] text-red-500 text-center">{error}</p>
+                        )}
+
+                        {/* Submit */}
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="w-full h-11 text-white text-[12px] font-medium rounded-[10px] bg-[#396CF7] shadow-[inset_0_3px_6px_rgba(255,255,255,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200 disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
+                        >
+                            {isSubmitting ? 'Signing in…' : 'Sign in'}
+                        </button>
+                    </form>
+                </div>
+
+                {/* Footer */}
+                <div className="flex justify-center mt-6">
+                    <RamaazPoweredSvg />
+                </div>
             </div>
         </div>
     );
-};
-
-export default LoginForm;
+}

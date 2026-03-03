@@ -1,42 +1,26 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { getUsers } from '@/src/features/users/services';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useUsers, useUserMutations } from '@/features/users';
 import 'rdb/styles';
-import { User, UsersResponse } from '@/src/features/users/types';
-import UserRow from '@/src/features/users/components/table/UserRow';
-import UserCell from '@/src/features/users/components/table/UserCell';
-import UserActions from '@/src/features/users/components/table/UserActions';
-import DraggableRDBModal from '@/src/features/users/components/table/DraggableRDBModal';
-import Pagination from '@/src/shared/components/table/Pagination';
-import LoadingTable from '@/src/shared/components/table/LoadingTable';
-import ErrorFetch from '@/src/shared/components/table/ErrorFetch';
-import TableHeader, { Column } from '@/src/shared/components/table/TableHeader';
+import type { User, UsersParams } from '@/features/users';
+import UserRow from './UserRow';
+import UserCell from './UserCell';
+import UserActions from './UserActions';
+import UserFilters from './UserFilters';
+import DraggableRDBModal from './DraggableRDBModal';
+import Pagination from '@/shared/components/table/Pagination';
+import LoadingTable from '@/shared/components/table/LoadingTable';
+import TableHeader, { type Column } from '@/shared/components/table/TableHeader';
 import { RDB } from 'rdb';
 import { serverActions } from '@/lib/rdb';
-const MyToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGUyYTYwNTA1MTU0ZjlmMTRhZmViZCIsImVtYWlsIjoicGhvbmVfOTYzOTgwMDMzNDk2QHRyeWRvcy1vdHAubG9jYWwiLCJ0eXBlIjoidXNlciIsImxhbmciOiJlbiIsImt5Y1N0YXR1cyI6Im5vdF9zdWJtaXR0ZWQiLCJpYXQiOjE3NzEwNzQyMjksImV4cCI6MTc3MzY2NjIyOX0.jeiRwUv9aV2Ks1dvqPjkKy5H8N8VpzO8Fvxbw40Ph_k';
+import { notify } from '@/shared/utils/notify';
+
 const UsersTable = () => {
-    const [users, setUsers] = useState<User[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const [page, setPage] = useState(0);
+    const [limit] = useState(10);
     const [isRdbModalOpen, setIsRdbModalOpen] = useState(false);
     const [selectedUserId, setSelectedUserId] = useState<string | null>(null);
-    const [pagination, setPagination] = useState<{
-        page: number;
-        limit: number;
-        total: number;
-        totalPages: number;
-        hasNext: boolean;
-        hasPrevious: boolean;
-    }>({
-        page: 0,
-        limit: 10,
-        total: 0,
-        totalPages: 0,
-        hasNext: false,
-        hasPrevious: false,
-    });
     const [filters, setFilters] = useState<{
         search: string;
         status: 'all' | 'active' | 'blocked';
@@ -47,64 +31,51 @@ const UsersTable = () => {
         verified: 'all',
     });
 
-    const fetchUsers = async (page: number = 0, limit: number = 10) => {
-        setLoading(true);
-        setError(null);
-        try {
-            // Build query parameters including filters
-            const params: any = { page, limit };
-            if (filters.search) {
-                params.search = filters.search;
-            }
-            if (filters.status !== 'all') {
-                params.status = filters.status;
-            }
-            if (filters.verified !== 'all') {
-                params.verified = filters.verified;
-            }
+    const queryParams: UsersParams = useMemo(() => {
+        const params: UsersParams = { page, limit };
+        if (filters.search) params.search = filters.search;
+        if (filters.status !== 'all') params.status = filters.status;
+        return params;
+    }, [filters.search, filters.status, limit, page]);
 
-            const response: UsersResponse = await getUsers(params);
-            setUsers(response.items);
-            setPagination({
-                page,
-                limit,
-                total: response.total,
-                totalPages: response.totalPages,
-                hasNext: response.hasNext,
-                hasPrevious: response.hasPrevious,
-            });
-        } catch (err: any) {
-            setError(err.message || 'Failed to fetch users');
-        } finally {
-            setLoading(false);
+    const { data, isLoading, error, refetch } = useUsers(queryParams);
+    const users = data?.items ?? [];
+
+    // Toast on error — never replace the table with an error screen
+    useEffect(() => {
+        if (error) {
+            notify({ message: error.message, type: 'error', timeout: 5000 });
         }
+    }, [error]);
+
+    const {
+        blockUser: doBlockUser,
+        unblockUser: doUnblockUser,
+        deleteUser: doDeleteUser,
+        isBlocking,
+        isDeleting,
+    } = useUserMutations();
+
+    const pagination = {
+        page,
+        limit,
+        total: data?.total ?? 0,
+        totalPages: data?.totalPages ?? 0,
+        hasNext: data?.hasNext ?? false,
+        hasPrevious: data?.hasPrevious ?? false,
     };
-
-    useEffect(() => {
-        fetchUsers(0, 10);
-    }, []);
-
-    // const sa = getServerActions()
-    useEffect(() => {
-        console.log('serverActions:' + JSON.stringify(serverActions));
-    }, [serverActions]);
 
     const handleFilterChange = (newFilters: {
         search?: string;
         status?: 'all' | 'active' | 'blocked';
         verified?: 'all' | 'verified' | 'unverified';
     }) => {
-        setFilters((prevFilters) => ({
-            ...prevFilters,
-            ...newFilters,
-        }));
-        fetchUsers(0, pagination.limit);
+        setFilters((prev) => ({ ...prev, ...newFilters }));
+        setPage(0);
     };
 
     const handlePageChange = (newPage: number) => {
-        if (newPage >= 0 && newPage < pagination.totalPages) {
-            fetchUsers(newPage, pagination.limit);
-        }
+        if (newPage >= 0 && newPage < pagination.totalPages) setPage(newPage);
     };
 
     const handleRowClick = (userId: string) => {
@@ -113,115 +84,130 @@ const UsersTable = () => {
 
     const handleEdit = (user: User) => {
         console.log('Edit user:', user);
-        // TODO: Implement edit functionality
     };
 
     const handleDelete = (userId: string) => {
-        console.log('Delete user:', userId);
-        // TODO: Implement delete functionality
+        doDeleteUser(userId);
     };
 
     const handleBlock = (userId: string) => {
-        console.log('Block/Unblock user:', userId);
-        // TODO: Implement block/unblock functionality
+        const user = users.find((u) => u._id === userId);
+        if (user?.isBlocked) {
+            doUnblockUser(userId);
+        } else {
+            doBlockUser(userId);
+        }
     };
+
     const handleRdbOpen = (userId: string) => {
         setSelectedUserId(userId);
         setIsRdbModalOpen(true);
     };
 
-    if (error) {
-        return (
-            <ErrorFetch error={error} fetch={() => fetchUsers(pagination.page, pagination.limit)} />
-        );
-    }
-
     const columns: Column<User>[] = [
         {
             key: 'name',
             header: 'Name',
-            render: (value: any, user: User) => (
+            render: (_value, user) => (
                 <UserCell user={user} column={{ key: 'name', header: 'Name' }} />
             ),
         },
         {
             key: 'email',
             header: 'Email',
-            render: (value: any, user: User) => (
+            render: (_value, user) => (
                 <UserCell user={user} column={{ key: 'email', header: 'Email' }} />
             ),
         },
         {
             key: 'phoneNumber',
             header: 'Phone',
-            render: (value: any, user: User) => (
+            render: (_value, user) => (
                 <UserCell user={user} column={{ key: 'phoneNumber', header: 'Phone' }} />
             ),
         },
         {
             key: 'isBlocked',
             header: 'Status',
-            render: (value: any, user: User) => (
+            render: (_value, user) => (
                 <UserCell user={user} column={{ key: 'isBlocked', header: 'Status' }} />
             ),
         },
         {
             key: 'verified',
             header: 'Verified',
-            render: (value: any, user: User) => (
+            render: (_value, user) => (
                 <UserCell user={user} column={{ key: 'verified', header: 'Verified' }} />
             ),
         },
         {
             key: 'createdAt',
             header: 'Created',
-            render: (value: any, user: User) => (
+            render: (_value, user) => (
                 <UserCell user={user} column={{ key: 'createdAt', header: 'Created' }} />
             ),
         },
         {
             key: 'actions',
             header: 'Actions',
-            render: (_: any, user: User) => (
+            render: (_value, user) => (
                 <UserActions
                     user={user}
-                    onEdit={(user) => handleEdit(user)}
+                    onEdit={(rowUser) => handleEdit(rowUser)}
                     onDelete={(userId) => handleDelete(userId)}
                     onBlock={(userId) => handleBlock(userId)}
                     onRdbOpen={(userId) => handleRdbOpen(userId)}
+                    isBlocking={isBlocking}
+                    isDeleting={isDeleting}
                 />
             ),
         },
     ];
 
+    // Refreshing = loading while already showing rows (page/filter change)
+    const isRefreshing = isLoading && users.length > 0;
+
     return (
-        <div className="bg-white mt-10 rounded-lg shadow overflow-hidden">
+        <div className="mt-10 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden relative">
+            {/* Thin progress bar on refresh — rows stay visible */}
+            {isRefreshing && (
+                <div className="absolute top-0 left-0 right-0 h-0.5 overflow-hidden z-20">
+                    <div className="animate-table-progress" />
+                </div>
+            )}
+
             {/* Filters */}
-            <div className="p-4 border-b border-gray-200">
-                {/* <UserFilters
+            <div className="px-5 py-4 border-b border-slate-100">
+                <UserFilters
                     onSearch={(search) => handleFilterChange({ search })}
-                    onFilterChange={(filters) => handleFilterChange(filters)}
-                /> */}
+                    onFilterChange={(updatedFilters) => handleFilterChange(updatedFilters)}
+                    onRefresh={refetch}
+                    isRefreshing={isRefreshing}
+                    refreshSuccessMessage="Users data refreshed"
+                />
             </div>
 
-            <div className="overflow-x-auto relative">
-                <table className="min-w-full divide-y divide-gray-200">
+            {/* Table */}
+            <div className="overflow-x-auto">
+                <table className="min-w-full">
                     <TableHeader<User> columns={columns} />
-                    <tbody
-                        className={`bg-white divide-y divide-gray-200 ${loading && users.length > 0 ? 'opacity-60' : ''}`}
-                    >
-                        {users.map((user, i) => (
-                            <UserRow
-                                handleRowClick={handleRowClick}
-                                key={`${user._id}-${i}`}
-                                user={user}
-                                columns={columns}
-                            />
-                        ))}
+                    <tbody className="bg-white">
+                        {isLoading && users.length === 0 ? (
+                            /* Initial load — show skeleton rows */
+                            <LoadingTable columnCount={columns.length} rowCount={10} />
+                        ) : (
+                            /* Rows always visible — never hidden during refresh or error */
+                            users.map((user, i) => (
+                                <UserRow
+                                    handleRowClick={handleRowClick}
+                                    key={`${user._id}-${i}`}
+                                    user={user}
+                                    columns={columns}
+                                />
+                            ))
+                        )}
                     </tbody>
                 </table>
-
-                <LoadingTable loading={loading} hasData={users.length > 0} />
             </div>
 
             {/* Pagination */}
@@ -237,7 +223,7 @@ const UsersTable = () => {
                 />
             )}
 
-            {/* Draggable RDB Modal */}
+            {/* RDB Modal */}
             <DraggableRDBModal
                 isOpen={isRdbModalOpen}
                 onClose={() => {
@@ -246,34 +232,15 @@ const UsersTable = () => {
                 }}
             >
                 <div className="py-1 h-full">
-                    {/* <h2 className="text-2xl font-bold mb-6 text-gray-800">
-                        User RDB Details - {selectedUserId}
-                    </h2> */}
-
-                    {/* RDB Component - Replace with actual RDB component import */}
-                    {/* Example implementation: */}
                     <RDB
-                        baseUrl="https://trydos_wallet_develop.ramaaz.dev"
-                        authToken={MyToken}
+                        authToken={undefined}
                         actions={serverActions}
                         handleUnauthenticated={() => {
                             console.log('user not authenticated');
                             setIsRdbModalOpen(false);
                             setSelectedUserId(null);
                         }}
-                        // ... other props from ramaaz-digital-banking
                     />
-
-                    {/* Placeholder */}
-                    {/* <div className="bg-gray-50 rounded-lg p-6 border-2 border-dashed border-gray-300">
-                        <p className="text-gray-600 text-center">
-                            RDB Component will be rendered here for user:{' '}
-                            <strong>{selectedUserId}</strong>
-                        </p>
-                        <p className="text-sm text-gray-500 text-center mt-2">
-                            Import and use the RDB component from ramaaz-digital-banking package
-                        </p>
-                    </div> */}
                 </div>
             </DraggableRDBModal>
         </div>

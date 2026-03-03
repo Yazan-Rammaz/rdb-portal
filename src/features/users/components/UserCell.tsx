@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { User } from '@/src/features/users/types';
-import { Column } from '@/src/shared/components/table/TableHeader';
+import type { User } from '../types';
+import type { Column } from '@/shared/components/table/TableHeader';
 
 interface UserCellProps {
     user: User;
@@ -57,7 +57,9 @@ const UserCell: React.FC<UserCellProps> = ({ user, column }) => {
         }
 
         return (
-            <div className="text-sm text-gray-900">{user[column.key as keyof User] || 'N/A'}</div>
+            <div className="text-sm text-gray-900">
+                {String(user[column.key as keyof User] || 'N/A')}
+            </div>
         );
     };
 

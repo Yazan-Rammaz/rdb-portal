@@ -1,7 +1,21 @@
 // Auth Types
-export interface User {
-    username?: string;
-    avatar: string;
+
+export interface AdminInfo {
+    id: string;
+    email: string;
+    fullName: string;
+    role: string;
+    permissions: string[];
+    status: string;
+    lastLoginIp: string;
+    lastLoginAt: string;
+    createdBy: string;
+    notes: string;
+    createdAt: string;
+    updatedAt: string;
+}
+
+export interface AdminUser {
     accessToken: {
         token: string;
         expiresAt: string;
@@ -10,33 +24,16 @@ export interface User {
         token: string;
         expiresAt: string;
     };
-    admin: {
-        id: string;
-        email: string;
-        fullName: string;
-        role: string;
-        permissions: string[];
-        status: string;
-        lastLoginIp: string;
-        lastLoginAt: string;
-        createdBy: string;
-        notes: string;
-        createdAt: string;
-        updatedAt: string;
-    };
+    admin: AdminInfo;
 }
-
-export interface UserInterface extends User {}
 
 export interface LoginCredentials {
     email: string;
     password: string;
-    pin?: string;
 }
 
 export interface AuthState {
-    user: User | null;
+    user: AdminInfo | null;
     isAuthenticated: boolean;
     isLoading: boolean;
-    isUnlocked: boolean;
 }

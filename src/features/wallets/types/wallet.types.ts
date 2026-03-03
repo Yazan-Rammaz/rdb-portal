@@ -1,3 +1,5 @@
+import type { PaginatedResponse, PaginationParams } from '@/shared/types';
+
 // Wallet Types
 export interface Wallet {
     id: string;
@@ -10,7 +12,10 @@ export interface Wallet {
     updatedAt: string;
 }
 
-export interface WalletsResponse {
-    items: Wallet[];
-    total: number;
+export type WalletsResponse = PaginatedResponse<Wallet>;
+
+export interface WalletsParams extends PaginationParams {
+    userId?: string;
+    status?: string;
+    type?: string;
 }

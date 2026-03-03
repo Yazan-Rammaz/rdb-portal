@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useMemo, useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface PinInputsProps {
@@ -21,14 +21,12 @@ const PinInputs: React.FC<PinInputsProps> = ({
     disabled,
 }) => {
     const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-    const [pin, setPin] = useState<string[]>(Array(6).fill(''));
     const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
 
-    // Sync internal state with external value prop
-    useEffect(() => {
-        const newPin = value.split('').slice(0, 6);
-        while (newPin.length < 6) newPin.push('');
-        setPin(newPin);
+    const pin = useMemo(() => {
+        const normalizedPin = value.split('').slice(0, 6);
+        while (normalizedPin.length < 6) normalizedPin.push('');
+        return normalizedPin;
     }, [value]);
 
     // Auto-focus first input on mount
@@ -52,7 +50,6 @@ const PinInputs: React.FC<PinInputsProps> = ({
 
         const newPin = [...pin];
         newPin[index] = val.slice(-1);
-        setPin(newPin);
 
         const combinedValue = newPin.join('');
         onChange(combinedValue);
@@ -83,7 +80,6 @@ const PinInputs: React.FC<PinInputsProps> = ({
             }
         });
 
-        setPin(newPin);
         const combinedValue = newPin.join('');
         onChange(combinedValue);
 

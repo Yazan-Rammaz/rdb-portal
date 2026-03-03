@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { User } from '@/src/features/users/types';
+import type { User } from '../types';
 
 interface UserActionsProps {
     user: User;
@@ -9,6 +9,8 @@ interface UserActionsProps {
     onDelete?: (userId: string) => void;
     onBlock?: (userId: string) => void;
     onRdbOpen?: (userId: string) => void;
+    isBlocking?: boolean;
+    isDeleting?: boolean;
 }
 
 const UserActions: React.FC<UserActionsProps> = ({
@@ -17,6 +19,8 @@ const UserActions: React.FC<UserActionsProps> = ({
     onDelete,
     onBlock,
     onRdbOpen,
+    isBlocking = false,
+    isDeleting = false,
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
@@ -82,7 +86,8 @@ const UserActions: React.FC<UserActionsProps> = ({
                         {onBlock && (
                             <button
                                 onClick={() => handleAction(() => onBlock(user._id))}
-                                className={`w-full cursor-pointer text-left px-4 py-2 text-sm flex items-center gap-2 ${
+                                disabled={isBlocking}
+                                className={`w-full cursor-pointer text-left px-4 py-2 text-sm flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed ${
                                     user.isBlocked
                                         ? 'text-green-700 hover:bg-green-50'
                                         : 'text-orange-700 hover:bg-orange-50'
@@ -124,7 +129,8 @@ const UserActions: React.FC<UserActionsProps> = ({
                         {onDelete && (
                             <button
                                 onClick={() => handleAction(() => onDelete(user._id))}
-                                className="w-full cursor-pointer text-left px-4 py-2 text-sm text-red-700 hover:bg-red-50 flex items-center gap-2"
+                                disabled={isDeleting}
+                                className="w-full cursor-pointer text-left px-4 py-2 text-sm text-red-700 hover:bg-red-50 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 <svg
                                     className="w-4 h-4"

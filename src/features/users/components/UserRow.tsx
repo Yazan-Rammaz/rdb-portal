@@ -1,7 +1,7 @@
 'use client';
 
-import { User } from '@/src/features/users/types';
-import TableRow, { Column } from '@/src/shared/components/table/TableRow';
+import type { User } from '../types';
+import TableRow, { type Column } from '@/shared/components/table/TableRow';
 
 interface UserRowProps {
     user: User;

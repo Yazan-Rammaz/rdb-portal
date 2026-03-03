@@ -1,2 +1,1 @@
-// Wallet hooks
-export const WalletHooks = {};
+export { useWallets } from './useWallets';

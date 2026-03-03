@@ -3,8 +3,8 @@
 import { useAuthContext } from '../context';
 
 /**
- * Hook to access auth context
- * Use this hook in components to get user and auth state
+ * Hook to access auth state and actions.
+ * Provides: user, isLoading, login, logout
  */
 export const useAuth = () => {
     return useAuthContext();

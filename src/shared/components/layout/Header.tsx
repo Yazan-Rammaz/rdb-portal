@@ -2,18 +2,16 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
 import { useLayout } from '../../context';
+import { useAuth } from '@/features/auth';
 import { ClockSvg, MenuSvg } from '@/src/shared/components/ui/Svgs';
 
 const Header = () => {
-    const { user, isMobile, sidebarOpen, setSidebarOpen } = useLayout();
-    const router = useRouter();
-    const pathname = usePathname();
+    const { isMobile, sidebarOpen, setSidebarOpen } = useLayout();
+    const { user, logout } = useAuth();
 
-    const handleLogout = () => {
-        localStorage.removeItem('user');
-        window.location.reload();
+    const handleLogout = async () => {
+        await logout();
     };
 
     return (
@@ -29,10 +27,11 @@ const Header = () => {
                             <Image
                                 className="object-cover"
                                 alt="user"
-                                src={user?.avatar || '/img/user.png'}
+                                src="/img/user.png"
                                 fill
                             />
                         </div>
+
                         {/* Menu button for mobile */}
                         {isMobile && (
                             <button
@@ -44,9 +43,9 @@ const Header = () => {
                             </button>
                         )}
 
-                        {/* Username - hide on very small screens */}
+                        {/* Username */}
                         <div className="hidden sm:flex items-center justify-center text-xs h-12.5 font-medium text-[#404040]">
-                            {user?.username}
+                            {user?.fullName}
                         </div>
 
                         {/* Clock - hide on mobile */}

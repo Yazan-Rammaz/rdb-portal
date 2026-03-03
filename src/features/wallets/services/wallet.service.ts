@@ -1,20 +1,10 @@
-import API from '@/shared/lib/api-client';
+'use server';
+
+import { getServerApi } from '@/shared/lib/api-server';
+import { API_ENDPOINTS } from '@/shared/constants';
 import { WalletsResponse } from '../types';
 
-/**
- * Get wallets list
- */
-export const getWallets = (): Promise<WalletsResponse> => {
-    return new Promise((resolve, reject) => {
-        API.get(
-            '/api/wallets',
-            {},
-            (response) => {
-                resolve(response as WalletsResponse);
-            },
-            (error) => {
-                reject(error);
-            },
-        );
-    });
+export const getWallets = async (): Promise<WalletsResponse> => {
+    const api = await getServerApi();
+    return api.get<WalletsResponse>(API_ENDPOINTS.WALLETS.LIST);
 };

@@ -1,2 +1,1 @@
-// Transaction hooks
-export const TransactionHooks = {};
+export { useTransactions } from './useTransactions';

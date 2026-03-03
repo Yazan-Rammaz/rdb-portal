@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLayout } from '../../context';
 import {
@@ -12,21 +12,7 @@ import {
     WalletLogoSvg,
 } from '@/src/shared/components/ui/Svgs';
 
-const UserRole = {
-    Admin: 1,
-    User: 2,
-};
-
 const SideBarContent = [
-    {
-        title: 'Transaction',
-        bg: '#404040',
-        route: '/transactions',
-        svg: <TransactionLogoSvg />,
-    },
-];
-
-const AdminSideBarContent = [
     {
         title: 'users',
         bg: '#002486',
@@ -54,18 +40,9 @@ const AdminSideBarContent = [
 ];
 
 const Sidebar: React.FC = () => {
-    const { user, isMobile, sidebarOpen, setSidebarOpen } = useLayout();
-    const [contents, setContents] = useState<any[]>([]);
+    const { isMobile, sidebarOpen, setSidebarOpen } = useLayout();
     const router = useRouter();
     const pathname = usePathname();
-
-    useEffect(() => {
-        if (user?.user?.type === UserRole.Admin) {
-            setContents(AdminSideBarContent);
-        } else {
-            setContents(AdminSideBarContent);
-        }
-    }, [user]);
 
     useEffect(() => {
         if (isMobile && sidebarOpen) {
@@ -113,7 +90,7 @@ const Sidebar: React.FC = () => {
             <aside
                 id="mobile-sidebar"
                 className={`
-                    shrink-0 flex flex-col items-center mb-2.5
+                    shrink-0 p-1 flex flex-col items-center mb-2.5
                     ${
                         isMobile
                             ? 'fixed top-0 left-0 h-full z-50 bg-white shadow-2xl w-70 px-7.5'
@@ -153,7 +130,7 @@ const Sidebar: React.FC = () => {
                 <nav
                     className={`
                         flex items-center justify-center flex-col w-full space-y-1.25
-                        ${isMobile ? 'px-0.5' : ''}
+                        px-0.5
                         max-h-[calc(100vh-200px)] overflow-y-auto
                     `}
                     style={{
@@ -161,22 +138,19 @@ const Sidebar: React.FC = () => {
                         scrollbarColor: '#d1d5db transparent',
                     }}
                 >
-                    {contents.map((content, key) => {
+                    {SideBarContent.map((content, key) => {
                         const isActive = pathname === content.route;
                         return (
                             <button
                                 key={key}
-                                style={{
-                                    backgroundColor: content.bg,
-                                    boxShadow: 'inset 0 3px 6px rgba(255, 255, 255, 0.5)',
-                                }}
+                                style={{ backgroundColor: content.bg }}
                                 className={`
-                                    hover:scale-[1.02] active:scale-[0.98] 
-                                    duration-200 transition-all h-11.25 
-                                    text-white text-[12px] rounded-[10px] 
-                                    flex items-center justify-between 
+                                    hover:scale-[1.02] active:scale-[0.98]
+                                    duration-200 transition-all h-11.25
+                                    text-white text-[12px] rounded-[10px]
+                                    flex items-center justify-between
                                     cursor-pointer w-full px-2.5
-                                    ${isActive ? 'ring-2 ring-blue-400 ring-offset-2' : ''}
+                                    shadow-[inset_0_3px_6px_rgba(255,255,255,0.5)]
                                 `}
                                 onClick={() => {
                                     router.push(content.route);
