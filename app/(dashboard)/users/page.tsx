@@ -1,4 +1,5 @@
-import { UserTable } from '@/components/dashboard/Users';
+import { UserTable } from '@/features/users';
+
 export default function UsersPage() {
     return (
         <div>
