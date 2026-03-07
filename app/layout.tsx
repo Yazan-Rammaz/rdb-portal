@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'RDB Portal',
+    title: 'RDB System Setting',
     description:
         'Manage your wallet transactions and business partners with Ramaaz Digital Banking Portal.',
 };

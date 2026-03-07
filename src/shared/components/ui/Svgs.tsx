@@ -1289,7 +1289,9 @@ export const LogoHeaderSvg = () => {
     return (
         <div className="flex items-center gap-1.5 select-none">
             <span className="text-[16px] font-bold tracking-tight text-[#404040]">RDB</span>
-            <span className="text-[14px] font-medium text-[#404040] opacity-80 pt-0.5">Portal</span>
+            <span className="text-[14px] font-medium text-[#404040] opacity-80 pt-0.5">
+                System Setting
+            </span>
         </div>
     );
 };

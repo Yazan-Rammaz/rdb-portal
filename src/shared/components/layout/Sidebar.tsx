@@ -19,24 +19,24 @@ const SideBarContent = [
         route: '/users',
         svg: <PartnerLogoSvg />,
     },
-    {
-        title: 'Transaction',
-        bg: '#404040',
-        route: '/transactions',
-        svg: <TransactionLogoSvg />,
-    },
-    {
-        title: 'System Wallet',
-        bg: '#396CF7',
-        route: '/system-wallets',
-        svg: <WalletLogoSvg color="#fcfcfc" />,
-    },
-    {
-        title: 'Business Partner',
-        bg: '#002486',
-        route: '/business-partner',
-        svg: <PartnerLogoSvg />,
-    },
+    // {
+    //     title: 'Transaction',
+    //     bg: '#404040',
+    //     route: '/transactions',
+    //     svg: <TransactionLogoSvg />,
+    // },
+    // {
+    //     title: 'System Wallet',
+    //     bg: '#396CF7',
+    //     route: '/system-wallets',
+    //     svg: <WalletLogoSvg color="#fcfcfc" />,
+    // },
+    // {
+    //     title: 'Business Partner',
+    //     bg: '#002486',
+    //     route: '/business-partner',
+    //     svg: <PartnerLogoSvg />,
+    // },
 ];
 
 const Sidebar: React.FC = () => {

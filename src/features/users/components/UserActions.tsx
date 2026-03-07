@@ -148,7 +148,7 @@ const UserActions: React.FC<UserActionsProps> = ({
                                 Delete
                             </button>
                         )}
-                        {onRdbOpen && (
+                        {/* {onRdbOpen && (
                             <button
                                 onClick={() => handleAction(() => onRdbOpen(user._id))}
                                 className="w-full cursor-pointer text-left px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 flex items-center gap-2"
@@ -168,7 +168,7 @@ const UserActions: React.FC<UserActionsProps> = ({
                                 </svg>
                                 Open RDB
                             </button>
-                        )}
+                        )} */}
                     </div>
                 </div>
             )}

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { useUsers, useUserMutations } from '@/features/users';
-import 'rdb/styles';
+// import 'rdb/styles';
 import type { User, UsersParams } from '@/features/users';
 import UserRow from './UserRow';
 import UserCell from './UserCell';
@@ -12,7 +12,7 @@ import DraggableRDBModal from './DraggableRDBModal';
 import Pagination from '@/shared/components/table/Pagination';
 import LoadingTable from '@/shared/components/table/LoadingTable';
 import TableHeader, { type Column } from '@/shared/components/table/TableHeader';
-import { RDB } from 'rdb';
+// import { RDB } from 'rdb';
 import { serverActions } from '@/lib/rdb';
 import { notify } from '@/shared/utils/notify';
 
@@ -232,7 +232,7 @@ const UsersTable = () => {
                 }}
             >
                 <div className="py-1 h-full">
-                    <RDB
+                    {/* <RDB
                         authToken={undefined}
                         actions={serverActions}
                         handleUnauthenticated={() => {
@@ -240,7 +240,7 @@ const UsersTable = () => {
                             setIsRdbModalOpen(false);
                             setSelectedUserId(null);
                         }}
-                    />
+                    /> */}
                 </div>
             </DraggableRDBModal>
         </div>
