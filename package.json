@@ -1,5 +1,5 @@
 {
-  "name": "rdb system setting",
+  "name": "rdb-system-setting",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "cf:build": "opennextjs-cloudflare build && rm -f .open-next/assets/_redirects",
+    "cf:build": "rm -rf node_modules package-lock.json && opennextjs-cloudflare build && rm -f .open-next/assets/_redirects",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && rm -f .open-next/assets/_redirects && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
