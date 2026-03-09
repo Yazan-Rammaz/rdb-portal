@@ -1,5 +1,5 @@
 
-name = "rdb system setting"
+name = "rdb-system-setting"
 main = ".open-next/worker.js"
 compatibility_date = "2026-03-06"
 compatibility_flags = ["nodejs_compat"]
