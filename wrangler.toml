@@ -1,0 +1,13 @@
+
+name = "rdb system setting"
+main = ".open-next/worker.js"
+compatibility_date = "2026-03-06"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true  
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[vars]
+NEXT_PUBLIC_RDB_BASE_URL = "https://trydos_wallet_develop.ramaaz.dev"

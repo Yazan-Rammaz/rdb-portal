@@ -6,10 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cf:build": "opennextjs-cloudflare build && rm -f .open-next/assets/_redirects",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && rm -f .open-next/assets/_redirects && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5",
+    "@opennextjs/cloudflare": "^1.17.1",
     "next": "16.1.6",
     "rdb": "file:../rdb",
     "react": "19.2.3",
@@ -24,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.71.0"
   }
 }
